@@ -122,12 +122,7 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 
 <div class="hdr">
   <div class="logo-wrap">
-    <svg width="32" height="26" viewBox="0 0 40 32" fill="none">
-      <rect x="1" y="1" width="38" height="30" rx="1" stroke="#002E66" stroke-width="2.2" fill="none"/>
-      <line x1="1" y1="11" x2="39" y2="11" stroke="#002E66" stroke-width="2.2"/>
-      <line x1="1" y1="21" x2="39" y2="21" stroke="#002E66" stroke-width="2.2"/>
-    </svg>
-    <span class="logo-text">HELIX</span>
+    <img src="/public/helix-logo.svg" alt="Helix" style="height:36px;width:auto"/>
   </div>
   <button class="close-btn" onclick="restart()">✕</button>
 </div>
@@ -149,15 +144,15 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
       </div>
       <div class="q-footer">
         <button class="footer-btn">
-          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <img src="/public/icon-chat.svg" style="width:20px;height:20px"/>
           Chat
         </button>
         <button class="footer-btn">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <img src="/public/icon-compare.svg" style="width:20px;height:20px"/>
           Compare
         </button>
         <button class="footer-btn">
-          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <img src="/public/icon-save.svg" style="width:20px;height:20px"/>
           Save
         </button>
       </div>
@@ -307,7 +302,10 @@ const plainWhy={
 const posLabel={Side:'a side sleeper',Back:'a back sleeper',Stomach:'a stomach sleeper','Toss and Turn':'a combination sleeper'};
 const posLabelPlain={Side:'on your side',Back:'on your back',Stomach:'on your stomach','Toss and Turn':'all over the place'};
 
-function chkSvg(){return`<svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;}
+  const ext={Dawn_Core:'jpg',Dawn_Luxe:'jpg',Dusk_Core:'jpg',Dusk_Luxe:'jpg',Elite:'jpg',Midnight_Core:'jpg',Midnight_Luxe:'jpg',Moonlight_Core:'jpg',Moonlight_Luxe:'jpg',Sunset_Core:'jpg',Sunset_Luxe:'jpg',Twilight_Core:'jpg',Twilight_Luxe:'jpg'};
+  const layerExt={Dawn_Core:'jpeg',Dawn_Luxe:'jpeg',Dusk_Core:'jpeg',Dusk_Luxe:'jpeg',Elite:'jpeg',Midnight_Core:'jpeg',Midnight_Luxe:'jpeg',Moonlight_Core:'jpeg',Moonlight_Luxe:'jpeg',Sunset_Core:'jpeg',Sunset_Luxe:'jpeg',Twilight_Core:'jpeg',Twilight_Luxe:'jpeg'};
+  function imgSrc(base,tier){const k=tier==='Elite'?'Elite':`${base}_${tier}`;return`/public/${k}.${ext[k]||'jpg'}`;}
+  function layerSrc(base,tier){const k=tier==='Elite'?'Elite':`${base}_${tier}`;return`/public/${k}_layers.${layerExt[k]||'jpeg'}`;}
 
 function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
   const spec=v==='A';
@@ -336,7 +334,7 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
 
   return `
   <div class="mat-card${isPrimary?' primary':''}">
-    <div class="card-img-ph">[ ${r.base} ${cardTier} image ]</div>
+    <img src="${productImg}" alt="${r.base} ${cardTier}" class="card-img" onerror="this.style.background='#e8ecf0';this.style.height='180px'"/>
     <div class="card-body">
       <div class="badge-row"><span class="badge ${isPrimary?'badge-primary':'badge-secondary'}">${badgeText}</span></div>
       <div><div class="card-kicker">${isPrimary?'Your Perfect Match:':'You May Also Like:'}</div><div class="card-name">Helix ${r.base} <em>${cardTier}</em></div></div>
@@ -350,7 +348,7 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
       </div>
       <div class="acc-body${accOpen?' open':''}" id="${cid}">
         <div class="acc-profile">${profile}</div>
-        <div class="acc-render-ph">[ ${r.base}_${cardTier}_layers render ]</div>
+        <img src="${renderImg}" alt="${r.base} ${cardTier} layers" style="width:100%;display:block;border-bottom:1px solid #F1F1F1" onerror="this.style.display='none'"/>
         ${layerHtml}
       </div>
     </div>
