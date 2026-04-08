@@ -7,110 +7,88 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAEAEA 16%,#A3B8CB 92%);min-height:100vh;color:#2E3339}
-
-/* ── HEADER ── */
 .hdr{background:linear-gradient(160deg,#EAEAEA 16%,#A3B8CB 92%);border-bottom:1.5px solid #fff;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.logo-wrap{display:flex;flex-direction:column;align-items:center;gap:4px}
-.logo-text{font-size:11px;font-weight:800;letter-spacing:.25em;color:#002E66}
 .close-btn{width:36px;height:36px;border-radius:50%;background:#002E66;border:none;cursor:pointer;color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center}
-
-/* ── BOTTOM NAV ── */
 .bottom-nav{background:#FFFFFF;border-top:1px solid #e5e7eb;height:96px;display:flex;justify-content:center;align-items:center;gap:12px;position:sticky;bottom:0;z-index:100}
-.btn-back{height:48px;width:56px;border-radius:11px;border:2px solid #002E66;background:#FFFFFF;cursor:pointer;color:#002E66;font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito Sans',sans-serif}
+.btn-back{height:48px;width:56px;border-radius:11px;border:2px solid #002E66;background:#FFFFFF;cursor:pointer;color:#002E66;font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .btn-back:disabled{opacity:.3;cursor:not-allowed}
 .btn-next{background:#002E66;color:#FFFFFF;border:none;border-radius:11px;height:48px;width:300px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Nunito Sans',sans-serif}
 .btn-next:disabled{opacity:.3;cursor:not-allowed}
-
-/* ── QUIZ SCREEN ── */
 #quiz-screen{display:flex;flex-direction:column;min-height:calc(100vh - 61px)}
 .quiz-body{flex:1;display:flex;gap:40px;align-items:flex-start;justify-content:center;padding:40px;max-width:1100px;margin:0 auto;width:100%}
-
 .q-panel{background:#FFFFFF;border-radius:14px;padding:24px;width:360px;flex-shrink:0}
-.q-counter{font-size:12px;font-weight:600;color:#444444;margin-bottom:8px}
+.q-counter{font-size:12px;font-weight:600;color:#444;margin-bottom:8px}
 .prog-track{height:5px;background:#e2e8f0;border-radius:3px;margin-bottom:20px;overflow:hidden}
 .prog-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#002E66 0%,#94a3b8 100%);transition:width .3s}
 .q-title{font-size:22px;font-weight:800;line-height:1.25;color:#2E3339;margin-bottom:10px}
-.q-sub{font-size:13px;color:#444444;line-height:1.55;margin-bottom:18px}
-
+.q-sub{font-size:13px;color:#444;line-height:1.55;margin-bottom:18px}
 .compare-card{background:#F1F1F1;border-radius:11px;padding:16px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .cc-title{font-size:13px;font-weight:700;color:#2E3339;margin-bottom:4px}
-.cc-sub{font-size:12px;color:#444444;line-height:1.45}
-.info-circle{width:20px;height:20px;border-radius:50%;border:1.5px solid #444444;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#444444;flex-shrink:0;margin-top:1px}
-
+.cc-sub{font-size:12px;color:#444;line-height:1.45}
+.info-circle{width:20px;height:20px;border-radius:50%;border:1.5px solid #444;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#444;flex-shrink:0;margin-top:1px}
 .q-footer{border-top:1px solid #e5e7eb;padding-top:14px;display:flex;gap:28px}
 .footer-btn{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:12px;font-weight:700;color:#002E66;cursor:pointer;text-decoration:underline;text-underline-offset:2px;background:none;border:none;font-family:'Nunito Sans',sans-serif}
-.footer-btn svg{width:20px;height:20px;fill:none;stroke:#002E66;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-
+.footer-btn img{width:20px;height:20px}
 .opts-panel{flex:1;display:flex;flex-direction:column;gap:10px}
-.opt-card{background:#FFFFFF;border:2px solid transparent;border-radius:11px;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:border-color .15s;box-shadow:0 2px 8px rgba(0,0,0,.1);min-height:72px}
-.opt-card:hover{border-color:#94a3b8}
-.opt-card.selected{border-color:#002E66}
-.opt-title{font-size:14px;font-weight:700;color:#2E3339;margin-bottom:3px}
-.opt-desc{font-size:12px;color:#444444;line-height:1.4}
-.opt-check{width:20px;height:20px;border-radius:4px;flex-shrink:0;display:none;align-items:center;justify-content:center;margin-top:1px;background:#002E66}
-.opt-card.selected .opt-check{display:flex}
-.chk{display:none}
-.opt-card.selected .chk{display:block}
-
-/* ── RESULT SCREEN ── */
+.opt-card{background:#FFFFFF;border:none;border-radius:11px;padding:16px;cursor:pointer;display:grid;grid-template-columns:1fr 28px;align-items:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,.1);min-height:98px;outline:2px solid transparent;outline-offset:0;transition:outline-color .15s}
+.opt-card:hover{outline-color:#94a3b8}
+.opt-card.selected{outline-color:#002E66}
+.opt-title{font-size:15px;font-weight:700;color:#2E3339;margin-bottom:4px}
+.opt-desc{font-size:13px;color:#444;line-height:1.4}
+.opt-check{width:22px;height:22px;border-radius:5px;background:#002E66;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .15s;justify-self:end}
+.opt-card.selected .opt-check{opacity:1}
+.opt-check svg{width:12px;height:12px;display:block}
 #result-screen{display:none;min-height:calc(100vh - 61px);padding-bottom:96px}
 .result-inner{max-width:1440px;margin:0 auto;padding:28px 28px 0}
-.res-kicker{font-size:13px;color:#444444;margin-bottom:4px}
+.res-kicker{font-size:13px;color:#444;margin-bottom:4px}
 .res-headline{font-size:30px;font-weight:800;color:#2E3339}
 .res-headline em{font-family:'Libre Baskerville',serif;font-style:italic;font-weight:400}
-
 .variant-bar{display:flex;gap:8px;padding:12px 28px}
 .vtab{padding:7px 18px;border-radius:20px;border:1.5px solid #002E66;font-size:12px;font-weight:700;cursor:pointer;background:transparent;color:#002E66;font-family:'Nunito Sans',sans-serif}
-.vtab.active{background:#002E66;color:#FFFFFF;border-color:#002E66}
-
+.vtab.active{background:#002E66;color:#FFFFFF}
 .cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 28px 24px}
 .mat-card{background:#FFFFFF;border-radius:14px;overflow:hidden;border:2px solid #e2e8f0;display:flex;flex-direction:column}
 .mat-card.primary{border-color:#002E66}
-
-.card-img-ph{width:100%;height:180px;background:linear-gradient(180deg,#d4dce6,#b8c8d8);display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a8fa3;font-style:italic}
+.card-img{width:100%;height:180px;object-fit:cover;display:block;background:#d4dce6}
+.layer-img{width:100%;min-height:160px;display:block;border-bottom:1px solid #F1F1F1;background:#f1f5f9}
 .card-body{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
 .badge-row{display:flex;justify-content:space-between;align-items:center}
 .badge{font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px}
 .badge-primary{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF}
-.badge-secondary{background:#F1F1F1;color:#444444}
-.card-kicker{font-size:11px;color:#444444}
+.badge-secondary{background:#F1F1F1;color:#444}
+.card-kicker{font-size:11px;color:#444}
 .card-name{font-size:20px;font-weight:800;color:#2E3339;line-height:1.2}
 .card-name em{font-family:'Libre Baskerville',serif;font-style:italic;font-weight:400}
 .stars-row{display:flex;align-items:center;gap:5px}
 .stars{color:#f59e0b;font-size:13px}
 .review-link{font-size:12px;font-weight:600;color:#002E66;text-decoration:underline;cursor:pointer}
-
 .why-head{font-size:13px;font-weight:700;color:#2E3339;margin-bottom:6px}
 .why-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
 .wi-icon{width:22px;height:22px;border-radius:50%;background:#22c55e;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center}
 .wi-icon svg{width:11px;height:11px}
 .wi-title{font-size:13px;font-weight:700;color:#2E3339;line-height:1.3}
-.wi-desc{font-size:12px;color:#444444;line-height:1.45;margin-top:1px}
+.wi-desc{font-size:12px;color:#444;line-height:1.45;margin-top:1px}
 .feat-label{font-size:11px;font-weight:700;color:#2E3339;margin-top:5px;margin-bottom:3px}
 .feat-pill{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;font-family:'Nunito Sans',sans-serif}
 .fp-gradient{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF}
 .fp-light{background:#F1F1F1;border:1px solid #e2e8f0;color:#2E3339}
-
 .acc-wrap{padding:0 16px 14px;border-top:1px solid #F1F1F1}
 .acc-toggle{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;font-size:12px;font-weight:700;color:#2E3339;cursor:pointer;background:#fafafa;border:1px solid #e2e8f0;border-radius:8px;margin:12px 0 0;user-select:none}
 .acc-toggle.open{border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-color:transparent}
-.acc-arrow{font-size:12px;color:#444444;transition:transform .2s}
+.acc-arrow{font-size:12px;color:#444;transition:transform .2s}
 .acc-body{display:none;background:#FFFFFF;border:1px solid #e2e8f0;border-top:none;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden}
 .acc-body.open{display:block}
-.acc-profile{font-size:11px;font-weight:600;color:#444444;padding:8px 12px 4px}
-.acc-render-ph{width:100%;height:120px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:11px;color:#94a3b8;border-bottom:1px solid #F1F1F1}
+.acc-profile{font-size:11px;font-weight:600;color:#444;padding:8px 12px 4px}
 .acc-layer{padding:6px 12px;border-bottom:1px solid #f8f8f8}
 .acc-layer:last-child{border-bottom:none}
 .acc-layer-name{font-size:12px;font-weight:700;color:#2E3339;margin-bottom:1px}
-.acc-layer-desc{font-size:11px;color:#444444;line-height:1.4}
-
+.acc-layer-desc{font-size:11px;color:#444;line-height:1.4}
 .trust-row{display:flex;justify-content:space-between;padding:10px 16px;border-top:1px solid #F1F1F1;background:#fafafa}
 .trust-item{text-align:center}
 .trust-val{font-size:11px;font-weight:700;color:#2E3339;display:block}
-.trust-label{font-size:10px;color:#444444;display:block;margin-top:1px}
-
+.trust-label{font-size:10px;color:#444;display:block;margin-top:1px}
 .price-row{padding:12px 16px;border-top:1px solid #F1F1F1;display:flex;justify-content:space-between;align-items:flex-start}
-.price-starting{font-size:10px;color:#444444;display:block;margin-bottom:2px}
+.price-starting{font-size:10px;color:#444;display:block;margin-bottom:2px}
 .price-main{font-size:15px;font-weight:800;color:#2E3339;display:block}
 .price-was{font-size:11px;color:#94a3b8;text-decoration:line-through;display:block;margin-top:1px}
 .price-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
@@ -121,13 +99,10 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 <body>
 
 <div class="hdr">
-  <div class="logo-wrap">
-    <img src="/helix-logo.svg" alt="Helix" style="height:36px;width:auto"/>
-  </div>
-  <button class="close-btn" onclick="restart()">✕</button>
+  <img src="helix-logo.svg" alt="Helix" style="height:36px;width:auto">
+  <button class="close-btn" onclick="restart()">&#10005;</button>
 </div>
 
-<!-- QUIZ -->
 <div id="quiz-screen">
   <div class="quiz-body">
     <div class="q-panel">
@@ -136,25 +111,13 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
       <div class="q-title" id="q-title"></div>
       <div class="q-sub" id="q-sub"></div>
       <div class="compare-card">
-        <div>
-          <div class="cc-title">See our mattresses side-by-side</div>
-          <div class="cc-sub">Use the interactive comparison tool and explore your favorite Helix mattress models.</div>
-        </div>
+        <div><div class="cc-title">See our mattresses side-by-side</div><div class="cc-sub">Use the interactive comparison tool and explore your favorite Helix mattress models.</div></div>
         <div class="info-circle">i</div>
       </div>
       <div class="q-footer">
-        <button class="footer-btn">
-          <img src="/icon-chat.svg" style="width:20px;height:20px"/>
-          Chat
-        </button>
-        <button class="footer-btn">
-          <img src="/icon-compare.svg" style="width:20px;height:20px"/>
-          Compare
-        </button>
-        <button class="footer-btn">
-          <img src="/icon-save.svg" style="width:20px;height:20px"/>
-          Save
-        </button>
+        <button class="footer-btn"><img src="icon-chat.svg" alt="">Chat</button>
+        <button class="footer-btn"><img src="icon-compare.svg" alt="">Compare</button>
+        <button class="footer-btn"><img src="icon-save.svg" alt="">Save</button>
       </div>
     </div>
     <div class="opts-panel" id="opts-panel"></div>
@@ -165,15 +128,14 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
   </div>
 </div>
 
-<!-- RESULT -->
 <div id="result-screen">
   <div class="result-inner">
     <div class="res-kicker">Your Perfect Mattress Match:</div>
     <div class="res-headline" id="res-headline"></div>
   </div>
   <div class="variant-bar">
-    <div class="vtab active" onclick="setVariant('A',this)">Version A — Spec language</div>
-    <div class="vtab" onclick="setVariant('B',this)">Version B — Plain language</div>
+    <div class="vtab active" onclick="setVariant('A',this)">Version A &#8212; Spec language</div>
+    <div class="vtab" onclick="setVariant('B',this)">Version B &#8212; Plain language</div>
   </div>
   <div class="cards-row" id="cards-row"></div>
   <div class="bottom-nav" style="position:fixed;bottom:0;left:0;right:0">
@@ -183,8 +145,8 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 </div>
 
 <script>
-const Qs=[
-  {id:'q1',title:'What\'s your primary sleep position?',sub:'Your sleep position helps us find which mattress will give you the best support where you need it most.',opts:[
+var Qs=[
+  {id:'q1',title:"What's your primary sleep position?",sub:'Your sleep position helps us find which mattress will give you the best support where you need it most.',opts:[
     {val:'Side',label:'Side sleeper',desc:'You fall asleep or wake up on your side.'},
     {val:'Back',label:'Back sleeper',desc:'You fall asleep or wake up on your back.'},
     {val:'Stomach',label:'Stomach sleeper',desc:'You fall asleep or wake up on your stomach.'},
@@ -196,39 +158,57 @@ const Qs=[
     {val:'Firm',label:'Firm feel',desc:'Firm top of your mattress with no sink or give.'}
   ]},
   {id:'q3',title:'How often do you wake up with back pain?',sub:'This helps us identify whether you need additional lumbar support built into your mattress.',opts:[
-    {val:'Rarely',label:'Rarely',desc:'Back pain isn\'t something I typically deal with.'},
+    {val:'Rarely',label:'Rarely',desc:"Back pain isn't something I typically deal with."},
     {val:'Sometimes',label:'Sometimes',desc:'I occasionally wake up with some stiffness or discomfort.'},
     {val:'Often',label:'Often',desc:'Back pain is a regular issue that affects my sleep.'}
   ]},
-  {id:'q4',title:'How often do you sleep hot?',sub:'Temperature regulation can make a big difference in sleep quality. We\'ll match you accordingly.',opts:[
+  {id:'q4',title:'How often do you sleep hot?',sub:"Temperature regulation can make a big difference in sleep quality. We'll match you accordingly.",opts:[
     {val:'Every night',label:'Every night',desc:'I always overheat during sleep.'},
     {val:'Most nights',label:'Most nights',desc:'I sleep hot more often than not.'},
     {val:'Sometimes',label:'Sometimes',desc:'I occasionally wake up too warm.'},
-    {val:'Rarely',label:'Rarely',desc:'Temperature isn\'t usually an issue for me.'},
+    {val:'Rarely',label:'Rarely',desc:"Temperature isn't usually an issue for me."},
     {val:'I typically sleep cold',label:'I sleep cold',desc:'I tend to get cold rather than hot at night.'}
   ]},
-  {id:'q5',title:'What matters most to you in a mattress?',sub:'This helps us match you to the right tier — from our everyday essential to our most premium build.',opts:[
+  {id:'q5',title:'What matters most to you in a mattress?',sub:'This helps us match you to the right tier.',opts:[
     {val:'I want the best of the best',label:'I want the best of the best',desc:'Give me the most premium option available, no compromises.'},
     {val:'I want good quality but it doesn\'t have to be the fanciest',label:'Good quality without the extras',desc:'I want a great mattress without needing the top of the line.'}
   ]}
 ];
 
-const answers={};
-let cur=0,variant='A',lastResult=null;
+var IMG_EXT={Dawn_Core:'jpg',Dawn_Luxe:'jpg',Dusk_Core:'jpg',Dusk_Luxe:'jpg',Elite:'jpg',Midnight_Core:'jpg',Midnight_Luxe:'jpg',Moonlight_Core:'jpg',Moonlight_Luxe:'jpg',Sunset_Core:'jpg',Sunset_Luxe:'jpg',Twilight_Core:'jpg',Twilight_Luxe:'jpg'};
+var LAYER_EXT={Dawn_Core:'jpeg',Dawn_Luxe:'jpeg',Dusk_Core:'jpeg',Dusk_Luxe:'jpeg',Elite:'jpeg',Midnight_Core:'jpeg',Midnight_Luxe:'jpeg',Moonlight_Core:'jpeg',Moonlight_Luxe:'jpeg',Sunset_Core:'jpeg',Sunset_Luxe:'jpeg',Twilight_Core:'jpeg',Twilight_Luxe:'jpeg'};
+
+function imgSrc(base,tier){
+  var k=tier==='Elite'?'Elite':base+'_'+tier;
+  return k+'.'+(IMG_EXT[k]||'jpg');
+}
+function layerSrc(base,tier){
+  var k=tier==='Elite'?'Elite':base+'_'+tier;
+  return k+'_layers.'+(LAYER_EXT[k]||'jpeg');
+}
+
+var answers={};
+var cur=0,variant='A',lastResult=null;
 
 function render(){
-  const q=Qs[cur];
-  document.getElementById('q-counter').textContent=`Question ${cur+1} of ${Qs.length}`;
-  document.getElementById('prog-fill').style.width=`${((cur+1)/Qs.length)*100}%`;
+  var q=Qs[cur];
+  document.getElementById('q-counter').textContent='Question '+(cur+1)+' of '+Qs.length;
+  document.getElementById('prog-fill').style.width=(((cur+1)/Qs.length)*100)+'%';
   document.getElementById('q-title').textContent=q.title;
   document.getElementById('q-sub').textContent=q.sub;
-  const panel=document.getElementById('opts-panel');
+  var panel=document.getElementById('opts-panel');
   panel.innerHTML='';
-  q.opts.forEach(o=>{
-    const d=document.createElement('div');
+  q.opts.forEach(function(o){
+    var d=document.createElement('div');
     d.className='opt-card'+(answers[q.id]===o.val?' selected':'');
-    d.innerHTML=`<div><div class="opt-title">${o.label}</div><div class="opt-desc">${o.desc}</div></div><div class="opt-check"><svg class="chk" viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
-    d.onclick=()=>{answers[q.id]=o.val;render();};
+    var inner=document.createElement('div');
+    var t=document.createElement('div');t.className='opt-title';t.textContent=o.label;
+    var s=document.createElement('div');s.className='opt-desc';s.textContent=o.desc;
+    inner.appendChild(t);inner.appendChild(s);
+    var box=document.createElement('div');box.className='opt-check';
+    box.innerHTML='<svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>';
+    d.appendChild(inner);d.appendChild(box);
+    d.onclick=function(){answers[q.id]=o.val;render();};
     panel.appendChild(d);
   });
   document.getElementById('btn-back').disabled=cur===0;
@@ -236,24 +216,25 @@ function render(){
   document.getElementById('btn-next').textContent=cur===Qs.length-1?'See my result':'Next';
 }
 
-function goNext(){if(!answers[Qs[cur].id])return;cur<Qs.length-1?(cur++,render()):showResult();}
+function goNext(){if(!answers[Qs[cur].id])return;if(cur<Qs.length-1){cur++;render();}else{showResult();}}
 function goBack(){if(cur>0){cur--;render();}}
 
 function calcResult(){
-  const{q1,q2,q3,q4,q5}=answers;
-  const tier=q5==='I want the best of the best'?'Elite':q3==='Often'?'Luxe':'Core';
-  const pos=['Side','Toss and Turn'].includes(q1)?'side':'back';
-  const base={side:{Soft:'Sunset',Medium:'Midnight',Firm:'Twilight'},back:{Soft:'Moonlight',Medium:'Dusk',Firm:'Dawn'}}[pos][q2];
-  return{tier,base,q1,q2,q3,q4,q5,
-    showTemp:['Every night','Most nights','Sometimes'].includes(q4),
-    showBackPain:['Sometimes','Often'].includes(q3)};
+  var q1=answers.q1,q2=answers.q2,q3=answers.q3,q4=answers.q4,q5=answers.q5;
+  var tier=q5==='I want the best of the best'?'Elite':q3==='Often'?'Luxe':'Core';
+  var pos=(q1==='Side'||q1==='Toss and Turn')?'side':'back';
+  var baseMap={side:{Soft:'Sunset',Medium:'Midnight',Firm:'Twilight'},back:{Soft:'Moonlight',Medium:'Dusk',Firm:'Dawn'}};
+  var base=baseMap[pos][q2];
+  return{tier:tier,base:base,q1:q1,q2:q2,q3:q3,q4:q4,q5:q5,
+    showTemp:['Every night','Most nights','Sometimes'].indexOf(q4)>-1,
+    showBackPain:['Sometimes','Often'].indexOf(q3)>-1};
 }
 
-const LAYERS={
+var LAYERS={
   Luxe:[
-    {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth Tencel Cover, or upgrade to GlacioTex Cooling Cover.'},
+    {n:'Customizable Top Layer',d:'Comes with our super soft Tencel Cover, or upgrade to GlacioTex Cooling Cover.'},
     {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
-    {n:'Ultra-Supportive Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4× the long-lasting, cradling comfort.'},
+    {n:'Ultra-Supportive Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4x the long-lasting, cradling comfort.'},
     {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam made for your feel preference, balancing cushioning and support.'},
     {n:'Position Support Layer',d:'Helix Premium Responsive Foam providing pressure relief across the shoulders and hips.'},
     {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hip and full perimeter.'},
@@ -261,9 +242,9 @@ const LAYERS={
   ],
   Elite:[
     {n:'Cutting-Edge Cooling Top Layer',d:'Innovative heat conductive fabric draws heat away from the surface of the mattress.'},
-    {n:'CoolForce™ Cooling Layer',d:'Five graphite ribbons pull 22% more heat away for 12+ hours. Included on Elite.'},
+    {n:'CoolForce Cooling Layer',d:'Five graphite ribbons pull 22% more heat away for 12+ hours. Included on Elite.'},
     {n:'Luxurious Comfort Layer',d:'Copper Gel Memory Foam poured in our Arizona facility. Naturally cooling and cozy.'},
-    {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7× the cushioning of standard foam.'},
+    {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7x the cushioning of standard foam.'},
     {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils for stability, pressure distribution, and motion isolation.'},
     {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam custom-created for your feel preference.'},
     {n:'Position Support Layer',d:'Premium Responsive Foam specifically for your sleep position.'},
@@ -280,93 +261,143 @@ const LAYERS={
     {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures the layers above for long-lasting durability.'}
   ]
 };
-const PROFILES={Core:'11" profile',Luxe:'13.5" profile',Elite:'15" profile'};
-
-const specWhy={
+var PROFILES={Core:'11" profile',Luxe:'13.5" profile',Elite:'15" profile'};
+var specWhy={
   feel:{Soft:'Progressive soft comfort with pressure-relieving memory foam layers.',Medium:'The goldilocks option: not too firm or too soft.',Firm:'Firm support with high-density foam core and reinforced edges.'},
   pos:'Works hand-in-hand with other layers to provide pressure support across the shoulders and hips.',
-  tempDesc:'Optional GlacioTex Cooling Cover & CoolForce Layer are scientifically proven to pull 22% more heat away from the body to keep you cool continuously for over 12 hours.',
+  tempDesc:'Optional GlacioTex Cooling Cover and CoolForce Layer are scientifically proven to pull 22% more heat away from the body to keep you cool continuously for over 12 hours.',
   tempLabel:'Cooling Technology',
   backDesc:'Additional hip support designed to prevent lower back sagging for those who experience regular lower back discomfort and pain.',
   backLabel:'Zoned Lumbar Support'
 };
-const plainWhy={
-  feel:{Soft:'Soft and cozy — you sink in like a cloud.',Medium:'Right in the middle — not too firm, not too soft.',Firm:'Solid support. You sleep on top of the mattress, not in it.'},
+var plainWhy={
+  feel:{Soft:'Soft and cozy - you sink in like a cloud.',Medium:'Right in the middle - not too firm, not too soft.',Firm:'Solid support. You sleep on top of the mattress, not in it.'},
   pos:'The mattress is built specifically for how you sleep, so you wake up comfortable.',
-  tempDesc:'This mattress is built to keep you cool all night — not just for an hour.',
+  tempDesc:'This mattress is built to keep you cool all night - not just for an hour.',
   tempLabel:'Stays cool all night',
   backDesc:'Extra support where your lower back needs it most, so you wake up feeling better.',
   backLabel:'Back pain support'
 };
-
-const posLabel={Side:'a side sleeper',Back:'a back sleeper',Stomach:'a stomach sleeper','Toss and Turn':'a combination sleeper'};
-const posLabelPlain={Side:'on your side',Back:'on your back',Stomach:'on your stomach','Toss and Turn':'all over the place'};
-
-  const ext={Dawn_Core:'jpg',Dawn_Luxe:'jpg',Dusk_Core:'jpg',Dusk_Luxe:'jpg',Elite:'jpg',Midnight_Core:'jpg',Midnight_Luxe:'jpg',Moonlight_Core:'jpg',Moonlight_Luxe:'jpg',Sunset_Core:'jpg',Sunset_Luxe:'jpg',Twilight_Core:'jpg',Twilight_Luxe:'jpg'};
-  const layerExt={Dawn_Core:'jpeg',Dawn_Luxe:'jpeg',Dusk_Core:'jpeg',Dusk_Luxe:'jpeg',Elite:'jpeg',Midnight_Core:'jpeg',Midnight_Luxe:'jpeg',Moonlight_Core:'jpeg',Moonlight_Luxe:'jpeg',Sunset_Core:'jpeg',Sunset_Luxe:'jpeg',Twilight_Core:'jpeg',Twilight_Luxe:'jpeg'};
-  function imgSrc(base,tier){const k=tier==='Elite'?'Elite':`${base}_${tier}`;return`/${k}.${ext[k]||'jpg'}`;}
-  function layerSrc(base,tier){const k=tier==='Elite'?'Elite':`${base}_${tier}`;return`/${k}_layers.${layerExt[k]||'jpeg'}`;}
+var posLabel={Side:'a side sleeper',Back:'a back sleeper',Stomach:'a stomach sleeper','Toss and Turn':'a combination sleeper'};
+var posLabelPlain={Side:'on your side',Back:'on your back',Stomach:'on your stomach','Toss and Turn':'all over the place'};
 
 function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
-  const spec=v==='A';
-  const W=spec?specWhy:plainWhy;
-  const layers=LAYERS[cardTier]||LAYERS.Core;
-  const profile=PROFILES[cardTier]||'';
-  const cid=`acc_${cardTier}_${Math.random().toString(36).slice(2,7)}`;
+  var spec=v==='A';
+  var W=spec?specWhy:plainWhy;
+  var layers=LAYERS[cardTier]||LAYERS.Core;
+  var profile=PROFILES[cardTier]||'';
+  var cid='acc_'+cardTier+'_'+Math.random().toString(36).slice(2,7);
+  var feelTitle=spec?'You Prefer A '+r.q2+' Feel':'You Like A '+r.q2+' Feel';
+  var posTitle=spec?'You Said You Are '+posLabel[r.q1]:'You Sleep '+posLabelPlain[r.q1];
 
-  const feelTitle=spec?`You Prefer A ${r.q2} Feel`:`You Like A ${r.q2} Feel`;
-  const posTitle=spec?`You Said You Are ${posLabel[r.q1]}`:`You Sleep ${posLabelPlain[r.q1]}`;
+  var card=document.createElement('div');
+  card.className='mat-card'+(isPrimary?' primary':'');
 
-  let whyHtml=`
-    <div class="why-item"><div class="wi-icon">${chkSvg()}</div><div><div class="wi-title">${feelTitle}</div><div class="wi-desc">${W.feel[r.q2]}</div></div></div>
-    <div class="why-item"><div class="wi-icon">${chkSvg()}</div><div><div class="wi-title">${posTitle}</div><div class="wi-desc">${W.pos}</div></div></div>`;
+  var pImg=document.createElement('img');
+  pImg.src=imgSrc(r.base,cardTier);
+  pImg.alt=r.base+' '+cardTier;
+  pImg.className='card-img';
+  card.appendChild(pImg);
 
+  var body=document.createElement('div');
+  body.className='card-body';
+
+  var badgeRow=document.createElement('div');badgeRow.className='badge-row';
+  var badge=document.createElement('span');
+  badge.className='badge '+(isPrimary?'badge-primary':'badge-secondary');
+  badge.textContent=badgeText;
+  badgeRow.appendChild(badge);
+  body.appendChild(badgeRow);
+
+  var nameWrap=document.createElement('div');
+  var kicker=document.createElement('div');kicker.className='card-kicker';kicker.textContent=isPrimary?'Your Perfect Match:':'You May Also Like:';
+  var nameEl=document.createElement('div');nameEl.className='card-name';
+  nameEl.innerHTML='Helix '+r.base+' <em>'+cardTier+'</em>';
+  nameWrap.appendChild(kicker);nameWrap.appendChild(nameEl);
+  body.appendChild(nameWrap);
+
+  var starsRow=document.createElement('div');starsRow.className='stars-row';
+  starsRow.innerHTML='<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="review-link">10,000 Reviews</span>';
+  body.appendChild(starsRow);
+
+  var whyWrap=document.createElement('div');
+  var whyHead=document.createElement('div');whyHead.className='why-head';whyHead.textContent="Why You'll Love It:";
+  whyWrap.appendChild(whyHead);
+
+  function addWhy(title,desc,featLabel,featPill,pillClass){
+    var item=document.createElement('div');item.className='why-item';
+    var icon=document.createElement('div');icon.className='wi-icon';
+    icon.innerHTML='<svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>';
+    var txt=document.createElement('div');
+    var t=document.createElement('div');t.className='wi-title';t.textContent=title;
+    var d=document.createElement('div');d.className='wi-desc';d.textContent=desc;
+    txt.appendChild(t);txt.appendChild(d);
+    if(featLabel){
+      var fl=document.createElement('div');fl.className='feat-label';fl.textContent=featLabel;
+      var fp=document.createElement('span');fp.className='feat-pill '+pillClass;fp.textContent=featPill;
+      txt.appendChild(fl);txt.appendChild(fp);
+    }
+    item.appendChild(icon);item.appendChild(txt);
+    whyWrap.appendChild(item);
+  }
+
+  addWhy(feelTitle,W.feel[r.q2],null,null,null);
+  addWhy(posTitle,W.pos,null,null,null);
   if(r.showTemp){
-    const pillText=isPrimary?(spec?'+ GlacioTex + CoolForce™ Available as Upgrades':'+ Cooling upgrades available'):(spec?'+ GlacioTex Available as Upgrade':'+ Cooling upgrade available');
-    whyHtml+=`<div class="why-item"><div class="wi-icon">${chkSvg()}</div><div><div class="wi-title">${spec?`You Sleep Hot ${r.q4}`:'You tend to sleep hot'}</div><div class="wi-desc">${W.tempDesc}</div><div class="feat-label">${W.tempLabel}</div><span class="feat-pill ${isPrimary?'fp-gradient':'fp-light'}">${pillText}</span></div></div>`;
+    var tPill=isPrimary?(spec?'+ GlacioTex + CoolForce Available as Upgrades':'+ Cooling upgrades available'):(spec?'+ GlacioTex Available as Upgrade':'+ Cooling upgrade available');
+    addWhy(spec?'You Sleep Hot '+r.q4:'You tend to sleep hot',W.tempDesc,W.tempLabel,tPill,isPrimary?'fp-gradient':'fp-light');
   }
   if(r.showBackPain){
-    const pillText=isPrimary?(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available'):(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available');
-    whyHtml+=`<div class="why-item"><div class="wi-icon">${chkSvg()}</div><div><div class="wi-title">${spec?'You Said You Wake Up With Back Pain':'You deal with back pain'}</div><div class="wi-desc">${W.backDesc}</div><div class="feat-label">${W.backLabel}</div><span class="feat-pill ${isPrimary?'fp-gradient':'fp-light'}">${pillText}</span></div></div>`;
+    var bPill=isPrimary?(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available'):(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade');
+    addWhy(spec?'You Said You Wake Up With Back Pain':'You deal with back pain',W.backDesc,W.backLabel,bPill,isPrimary?'fp-gradient':'fp-light');
   }
+  body.appendChild(whyWrap);
+  card.appendChild(body);
 
-  const layerHtml=layers.map((l,i)=>`<div class="acc-layer"><div class="acc-layer-name">${i+1}. ${l.n}</div><div class="acc-layer-desc">${l.d}</div></div>`).join('');
+  var accWrap=document.createElement('div');accWrap.className='acc-wrap';
+  var toggle=document.createElement('div');
+  toggle.className='acc-toggle'+(accOpen?' open':'');
+  toggle.id='abtn-'+cid;
+  var lbl=document.createElement('span');lbl.id='albl-'+cid;lbl.textContent=accOpen?'Hide Construction Details':'View Construction Details';
+  var arr=document.createElement('span');arr.className='acc-arrow';arr.id='aarr-'+cid;arr.innerHTML='&#8964;';arr.style.transform=accOpen?'rotate(180deg)':'none';
+  toggle.appendChild(lbl);toggle.appendChild(arr);
+  toggle.onclick=function(){toggleAcc(cid,toggle);};
+  accWrap.appendChild(toggle);
 
-  return `
-  <div class="mat-card${isPrimary?' primary':''}">
-    <img src="${productImg}" alt="${r.base} ${cardTier}" class="card-img" onerror="this.style.background='#e8ecf0';this.style.height='180px'"/>
-    <div class="card-body">
-      <div class="badge-row"><span class="badge ${isPrimary?'badge-primary':'badge-secondary'}">${badgeText}</span></div>
-      <div><div class="card-kicker">${isPrimary?'Your Perfect Match:':'You May Also Like:'}</div><div class="card-name">Helix ${r.base} <em>${cardTier}</em></div></div>
-      <div class="stars-row"><span class="stars">★★★★★</span><span class="review-link">10,000 Reviews</span></div>
-      <div><div class="why-head">Why You'll Love It:</div>${whyHtml}</div>
-    </div>
-    <div class="acc-wrap">
-      <div class="acc-toggle${accOpen?' open':''}" id="abtn-${cid}" onclick="toggleAcc('${cid}',this)">
-        <span id="albl-${cid}">${accOpen?'Hide Construction Details':'View Construction Details'}</span>
-        <span class="acc-arrow" id="aarr-${cid}" style="transform:${accOpen?'rotate(180deg)':'none'}">&#8964;</span>
-      </div>
-      <div class="acc-body${accOpen?' open':''}" id="${cid}">
-        <div class="acc-profile">${profile}</div>
-        <img src="${renderImg}" alt="${r.base} ${cardTier} layers" style="width:100%;display:block;border-bottom:1px solid #F1F1F1" onerror="this.style.display='none'"/>
-        ${layerHtml}
-      </div>
-    </div>
-    <div class="trust-row">
-      <div class="trust-item"><span class="trust-val">120 Nights</span><span class="trust-label">Risk-free trial</span></div>
-      <div class="trust-item"><span class="trust-val">Free</span><span class="trust-label">Shipping &amp; returns</span></div>
-      <div class="trust-item"><span class="trust-val">Limited</span><span class="trust-label">Lifetime warranty</span></div>
-    </div>
-    <div class="price-row">
-      <div><span class="price-starting">Starting at</span><span class="price-main">Queen: $1,649.75</span><span class="price-was">($1,373.75)</span></div>
-      <div class="price-right"><button class="shop-btn">Shop Now</button><span class="price-link">Pricing Details</span></div>
-    </div>
-  </div>`;
+  var accBody=document.createElement('div');
+  accBody.className='acc-body'+(accOpen?' open':'');
+  accBody.id=cid;
+  var profEl=document.createElement('div');profEl.className='acc-profile';profEl.textContent=profile;
+  accBody.appendChild(profEl);
+  var rImg=document.createElement('img');
+  rImg.src=layerSrc(r.base,cardTier);
+  rImg.alt='layers';
+  rImg.className='layer-img';
+  accBody.appendChild(rImg);
+  layers.forEach(function(l,i){
+    var lay=document.createElement('div');lay.className='acc-layer';
+    var ln=document.createElement('div');ln.className='acc-layer-name';ln.textContent=(i+1)+'. '+l.n;
+    var ld=document.createElement('div');ld.className='acc-layer-desc';ld.textContent=l.d;
+    lay.appendChild(ln);lay.appendChild(ld);
+    accBody.appendChild(lay);
+  });
+  accWrap.appendChild(accBody);
+  card.appendChild(accWrap);
+
+  var trust=document.createElement('div');trust.className='trust-row';
+  trust.innerHTML='<div class="trust-item"><span class="trust-val">120 Nights</span><span class="trust-label">Risk-free trial</span></div><div class="trust-item"><span class="trust-val">Free</span><span class="trust-label">Shipping &amp; returns</span></div><div class="trust-item"><span class="trust-val">Limited</span><span class="trust-label">Lifetime warranty</span></div>';
+  card.appendChild(trust);
+
+  var price=document.createElement('div');price.className='price-row';
+  price.innerHTML='<div><span class="price-starting">Starting at</span><span class="price-main">Queen: $1,649.75</span><span class="price-was">($1,373.75)</span></div><div class="price-right"><button class="shop-btn">Shop Now</button><span class="price-link">Pricing Details</span></div>';
+  card.appendChild(price);
+
+  return card;
 }
 
 function toggleAcc(id,el){
-  const body=document.getElementById(id);
-  const open=body.classList.toggle('open');
+  var body=document.getElementById(id);
+  var open=body.classList.toggle('open');
   el.classList.toggle('open',open);
   document.getElementById('albl-'+id).textContent=open?'Hide Construction Details':'View Construction Details';
   document.getElementById('aarr-'+id).style.transform=open?'rotate(180deg)':'none';
@@ -380,22 +411,26 @@ function showResult(){
 }
 
 function renderResult(){
-  const r=lastResult;
-  document.getElementById('res-headline').innerHTML=`Helix ${r.base} <em>${r.tier}</em>`;
-  const order=r.tier==='Luxe'?['Luxe','Elite','Core']:r.tier==='Elite'?['Elite','Luxe','Core']:['Core','Luxe','Elite'];
-  const badges={Luxe:'Best Match',Elite:'Most Luxurious',Core:'Best Value'};
-  document.getElementById('cards-row').innerHTML=order.map((t,i)=>buildCard(r,t,badges[t],i===0,variant,i===0)).join('');
+  var r=lastResult;
+  document.getElementById('res-headline').innerHTML='Helix '+r.base+' <em>'+r.tier+'</em>';
+  var order=r.tier==='Luxe'?['Luxe','Elite','Core']:r.tier==='Elite'?['Elite','Luxe','Core']:['Core','Luxe','Elite'];
+  var badges={Luxe:'Best Match',Elite:'Most Luxurious',Core:'Best Value'};
+  var row=document.getElementById('cards-row');
+  row.innerHTML='';
+  order.forEach(function(t,i){
+    row.appendChild(buildCard(r,t,badges[t],i===0,variant,i===0));
+  });
 }
 
 function setVariant(v,el){
   variant=v;
-  document.querySelectorAll('.vtab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.vtab').forEach(function(t){t.classList.remove('active');});
   el.classList.add('active');
   if(lastResult)renderResult();
 }
 
 function restart(){
-  Object.keys(answers).forEach(k=>delete answers[k]);
+  Object.keys(answers).forEach(function(k){delete answers[k];});
   cur=0;lastResult=null;
   document.getElementById('result-screen').style.display='none';
   document.getElementById('quiz-screen').style.display='flex';
