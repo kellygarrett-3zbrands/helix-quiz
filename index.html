@@ -122,7 +122,7 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 
 <div class="hdr">
   <div class="logo-wrap">
-    <img src="/public/helix-logo.svg" alt="Helix" style="height:36px;width:auto"/>
+    <img src="/helix-logo.svg" alt="Helix" style="height:36px;width:auto"/>
   </div>
   <button class="close-btn" onclick="restart()">✕</button>
 </div>
@@ -144,15 +144,15 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
       </div>
       <div class="q-footer">
         <button class="footer-btn">
-          <img src="/public/icon-chat.svg" style="width:20px;height:20px"/>
+          <img src="/icon-chat.svg" style="width:20px;height:20px"/>
           Chat
         </button>
         <button class="footer-btn">
-          <img src="/public/icon-compare.svg" style="width:20px;height:20px"/>
+          <img src="/icon-compare.svg" style="width:20px;height:20px"/>
           Compare
         </button>
         <button class="footer-btn">
-          <img src="/public/icon-save.svg" style="width:20px;height:20px"/>
+          <img src="/icon-save.svg" style="width:20px;height:20px"/>
           Save
         </button>
       </div>
@@ -304,8 +304,8 @@ const posLabelPlain={Side:'on your side',Back:'on your back',Stomach:'on your st
 
   const ext={Dawn_Core:'jpg',Dawn_Luxe:'jpg',Dusk_Core:'jpg',Dusk_Luxe:'jpg',Elite:'jpg',Midnight_Core:'jpg',Midnight_Luxe:'jpg',Moonlight_Core:'jpg',Moonlight_Luxe:'jpg',Sunset_Core:'jpg',Sunset_Luxe:'jpg',Twilight_Core:'jpg',Twilight_Luxe:'jpg'};
   const layerExt={Dawn_Core:'jpeg',Dawn_Luxe:'jpeg',Dusk_Core:'jpeg',Dusk_Luxe:'jpeg',Elite:'jpeg',Midnight_Core:'jpeg',Midnight_Luxe:'jpeg',Moonlight_Core:'jpeg',Moonlight_Luxe:'jpeg',Sunset_Core:'jpeg',Sunset_Luxe:'jpeg',Twilight_Core:'jpeg',Twilight_Luxe:'jpeg'};
-  function imgSrc(base,tier){const k=tier==='Elite'?'Elite':`${base}_${tier}`;return`/public/${k}.${ext[k]||'jpg'}`;}
-  function layerSrc(base,tier){const k=tier==='Elite'?'Elite':`${base}_${tier}`;return`/public/${k}_layers.${layerExt[k]||'jpeg'}`;}
+  function imgSrc(base,tier){const k=tier==='Elite'?'Elite':`${base}_${tier}`;return`/${k}.${ext[k]||'jpg'}`;}
+  function layerSrc(base,tier){const k=tier==='Elite'?'Elite':`${base}_${tier}`;return`/${k}_layers.${layerExt[k]||'jpeg'}`;}
 
 function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
   const spec=v==='A';
