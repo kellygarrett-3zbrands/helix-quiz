@@ -38,6 +38,8 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 .opt-check{width:22px;height:22px;border-radius:5px;background:#002E66;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .15s;justify-self:end}
 .opt-card.selected .opt-check{opacity:1}
 .opt-check svg{width:12px;height:12px;display:block}
+
+/* RESULT SCREEN */
 #result-screen{display:none;min-height:calc(100vh - 61px);padding-bottom:96px}
 .result-inner{max-width:1440px;margin:0 auto;padding:28px 28px 0}
 .res-kicker{font-size:13px;color:#444;margin-bottom:4px}
@@ -46,48 +48,60 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 .variant-bar{display:flex;gap:8px;padding:12px 28px}
 .vtab{padding:7px 18px;border-radius:20px;border:1.5px solid #002E66;font-size:12px;font-weight:700;cursor:pointer;background:transparent;color:#002E66;font-family:'Nunito Sans',sans-serif}
 .vtab.active{background:#002E66;color:#FFFFFF}
-.cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 28px 24px}
-.mat-card{background:#FFFFFF;border-radius:14px;overflow:hidden;border:2px solid #e2e8f0;display:flex;flex-direction:column}
-.mat-card.primary{border-color:#002E66}
-.card-img{width:100%;height:240px;object-fit:cover;object-position:center;display:block;background:#d4dce6}
-.layer-img{width:100%;display:block;border-bottom:1px solid #F1F1F1;background:#fff;object-fit:contain}
-.card-body{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
-.badge-row{display:flex;justify-content:space-between;align-items:center}
-.badge{font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px}
-.badge-primary{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF}
-.badge-secondary{background:#F1F1F1;color:#444}
+.cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 28px 24px;align-items:start}
+
+/* CARD */
+.mat-card{background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;display:flex;flex-direction:column;height:fit-content}
+.mat-card.primary{border:2px solid #002E66}
+.card-img{width:100%;height:240px;object-fit:cover;display:block;background:#d4dce6}
+
+/* CARD HEADER */
+.card-header{padding:16px 20px;border-bottom:1px solid #F1F1F1}
+.card-top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .card-kicker{font-size:11px;color:#444}
-.card-name{font-size:20px;font-weight:800;color:#2E3339;line-height:1.2}
+.badge{font-size:11px;font-weight:700;padding:0 14px;border-radius:11px;display:inline-flex;align-items:center;height:37px;line-height:1;white-space:nowrap}
+.badge-primary{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF}
+.badge-secondary{background:#F1F1F1;color:#444;border:1px solid #e2e8f0}
+.card-name{font-size:20px;font-weight:800;color:#2E3339;line-height:1.2;margin-bottom:6px}
 .card-name em{font-family:'Libre Baskerville',serif;font-style:italic;font-weight:400}
 .stars-row{display:flex;align-items:center;gap:5px}
 .stars{color:#f59e0b;font-size:13px}
 .review-link{font-size:12px;font-weight:600;color:#002E66;text-decoration:underline;cursor:pointer}
-.why-head{font-size:13px;font-weight:700;color:#2E3339;margin-bottom:6px}
-.why-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
+
+/* WHY SECTION */
+.why-section{padding:16px 20px;border-bottom:1px solid #F1F1F1}
+.why-head{font-size:13px;font-weight:700;color:#2E3339;margin-bottom:12px}
+.why-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}
+.why-item:last-child{margin-bottom:0}
 .wi-icon{width:22px;height:22px;border-radius:50%;background:#22c55e;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center}
 .wi-icon svg{width:11px;height:11px}
 .wi-title{font-size:13px;font-weight:700;color:#2E3339;line-height:1.3}
-.wi-desc{font-size:12px;color:#444;line-height:1.45;margin-top:1px}
-.feat-label{font-size:11px;font-weight:700;color:#2E3339;margin-top:5px;margin-bottom:3px}
-.feat-pill{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;font-family:'Nunito Sans',sans-serif}
+.wi-desc{font-size:12px;color:#444;line-height:1.45;margin-top:2px}
+.feat-label{font-size:11px;font-weight:700;color:#2E3339;margin-top:6px;margin-bottom:4px}
+.feat-pill{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:8px 14px;border-radius:100px;font-family:'Nunito Sans',sans-serif}
 .fp-gradient{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF}
 .fp-light{background:#F1F1F1;border:1px solid #e2e8f0;color:#2E3339}
-.acc-wrap{padding:0 16px 14px;border-top:1px solid #F1F1F1}
-.acc-toggle{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;font-size:12px;font-weight:700;color:#2E3339;cursor:pointer;background:#fafafa;border:1px solid #e2e8f0;border-radius:8px;margin:12px 0 0;user-select:none}
-.acc-toggle.open{border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-color:transparent}
+
+/* CONSTRUCTION ACCORDION */
+.acc-toggle{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;font-size:12px;font-weight:700;color:#2E3339;cursor:pointer;background:#FFFFFF;border-top:none;border-bottom:1px solid #F1F1F1;user-select:none}
 .acc-arrow{font-size:12px;color:#444;transition:transform .2s}
-.acc-body{display:none;background:#FFFFFF;border:1px solid #e2e8f0;border-top:none;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden}
+.acc-body{display:none;background:#FFFFFF;border-bottom:1px solid #e2e8f0}
 .acc-body.open{display:block}
-.acc-profile{font-size:11px;font-weight:600;color:#444;padding:8px 12px 4px}
-.acc-layer{padding:6px 12px;border-bottom:1px solid #f8f8f8}
-.acc-layer:last-child{border-bottom:none}
-.acc-layer-name{font-size:12px;font-weight:700;color:#2E3339;margin-bottom:1px}
+.acc-profile{font-size:11px;font-weight:600;color:#444;padding:10px 20px 6px}
+.layer-img{width:100%;display:none;border-bottom:1px solid #F1F1F1;background:#fff;object-fit:contain}
+.acc-body.open .layer-img{display:block}
+.acc-layer{padding:8px 20px}
+.acc-layer:nth-child(odd){background:#F1F1F1}
+.acc-layer:nth-child(even){background:#FFFFFF}
+.acc-layer-name{font-size:12px;font-weight:700;color:#2E3339;margin-bottom:2px}
 .acc-layer-desc{font-size:11px;color:#444;line-height:1.4}
-.trust-row{display:flex;justify-content:space-between;padding:10px 16px;border-top:1px solid #F1F1F1;background:#fafafa}
+
+/* TRUST + PRICE */
+.trust-row{display:flex;justify-content:space-between;padding:12px 20px;background:#FFFFFF;border-top:1px solid #F1F1F1}
 .trust-item{text-align:center}
 .trust-val{font-size:11px;font-weight:700;color:#2E3339;display:block}
 .trust-label{font-size:10px;color:#444;display:block;margin-top:1px}
-.price-row{padding:12px 16px;border-top:1px solid #F1F1F1;display:flex;justify-content:space-between;align-items:flex-start}
+.price-row{padding:14px 20px;border-top:1px solid #F1F1F1;background:#FFFFFF;display:flex;justify-content:space-between;align-items:flex-start}
 .price-starting{font-size:10px;color:#444;display:block;margin-bottom:2px}
 .price-main{font-size:15px;font-weight:800;color:#2E3339;display:block}
 .price-was{font-size:11px;color:#94a3b8;text-decoration:line-through;display:block;margin-top:1px}
@@ -177,15 +191,8 @@ var Qs=[
 
 var IMG_EXT={Dawn_Core:'jpg',Dawn_Luxe:'jpg',Dusk_Core:'jpg',Dusk_Luxe:'jpg',Elite:'jpg',Midnight_Core:'jpg',Midnight_Luxe:'jpg',Moonlight_Core:'jpg',Moonlight_Luxe:'jpg',Sunset_Core:'jpg',Sunset_Luxe:'jpg',Twilight_Core:'jpg',Twilight_Luxe:'jpg'};
 var LAYER_EXT={Dawn_Core:'png',Dawn_Luxe:'png',Dusk_Core:'png',Dusk_Luxe:'png',Elite:'png',Midnight_Core:'png',Midnight_Luxe:'png',Moonlight_Core:'png',Moonlight_Luxe:'png',Sunset_Core:'png',Sunset_Luxe:'png',Twilight_Core:'png',Twilight_Luxe:'png'};
-
-function imgSrc(base,tier){
-  var k=tier==='Elite'?'Elite':base+'_'+tier;
-  return k+'.'+(IMG_EXT[k]||'jpg');
-}
-function layerSrc(base,tier){
-  var k=tier==='Elite'?'Elite':base+'_'+tier;
-  return k+'_layers.'+(LAYER_EXT[k]||'jpeg');
-}
+function imgSrc(base,tier){var k=tier==='Elite'?'Elite':base+'_'+tier;return k+'.'+(IMG_EXT[k]||'jpg');}
+function layerSrc(base,tier){var k=tier==='Elite'?'Elite':base+'_'+tier;return k+'_layers.'+(LAYER_EXT[k]||'png');}
 
 var answers={};
 var cur=0,variant='A',lastResult=null;
@@ -287,42 +294,39 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
   var layers=LAYERS[cardTier]||LAYERS.Core;
   var profile=PROFILES[cardTier]||'';
   var cid='acc_'+cardTier+'_'+Math.random().toString(36).slice(2,7);
-  var feelTitle=spec?'You Prefer A '+r.q2+' Feel':'You Like A '+r.q2+' Feel';
-  var posTitle=spec?'You Said You Are '+posLabel[r.q1]:'You Sleep '+posLabelPlain[r.q1];
 
   var card=document.createElement('div');
   card.className='mat-card'+(isPrimary?' primary':'');
 
+  // Product image
   var pImg=document.createElement('img');
   pImg.src=imgSrc(r.base,cardTier);
   pImg.alt=r.base+' '+cardTier;
   pImg.className='card-img';
   card.appendChild(pImg);
 
-  var body=document.createElement('div');
-  body.className='card-body';
-
-  var badgeRow=document.createElement('div');badgeRow.className='badge-row';
+  // Header section
+  var hdr=document.createElement('div');
+  hdr.className='card-header';
+  var topRow=document.createElement('div');
+  topRow.className='card-top-row';
+  var kicker=document.createElement('div');kicker.className='card-kicker';kicker.textContent=isPrimary?'Your Perfect Match:':'You May Also Like:';
   var badge=document.createElement('span');
   badge.className='badge '+(isPrimary?'badge-primary':'badge-secondary');
   badge.textContent=badgeText;
-  badgeRow.appendChild(badge);
-  body.appendChild(badgeRow);
-
-  var nameWrap=document.createElement('div');
-  var kicker=document.createElement('div');kicker.className='card-kicker';kicker.textContent=isPrimary?'Your Perfect Match:':'You May Also Like:';
+  topRow.appendChild(kicker);topRow.appendChild(badge);
   var nameEl=document.createElement('div');nameEl.className='card-name';
   nameEl.innerHTML='Helix '+r.base+' <em>'+cardTier+'</em>';
-  nameWrap.appendChild(kicker);nameWrap.appendChild(nameEl);
-  body.appendChild(nameWrap);
-
   var starsRow=document.createElement('div');starsRow.className='stars-row';
   starsRow.innerHTML='<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="review-link">10,000 Reviews</span>';
-  body.appendChild(starsRow);
+  hdr.appendChild(topRow);hdr.appendChild(nameEl);hdr.appendChild(starsRow);
+  card.appendChild(hdr);
 
-  var whyWrap=document.createElement('div');
+  // Why section
+  var whySec=document.createElement('div');
+  whySec.className='why-section';
   var whyHead=document.createElement('div');whyHead.className='why-head';whyHead.textContent="Why You'll Love It:";
-  whyWrap.appendChild(whyHead);
+  whySec.appendChild(whyHead);
 
   function addWhy(title,desc,featLabel,featPill,pillClass){
     var item=document.createElement('div');item.className='why-item';
@@ -338,9 +342,11 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
       txt.appendChild(fl);txt.appendChild(fp);
     }
     item.appendChild(icon);item.appendChild(txt);
-    whyWrap.appendChild(item);
+    whySec.appendChild(item);
   }
 
+  var feelTitle=spec?'You Prefer A '+r.q2+' Feel':'You Like A '+r.q2+' Feel';
+  var posTitle=spec?'You Said You Are '+posLabel[r.q1]:'You Sleep '+posLabelPlain[r.q1];
   addWhy(feelTitle,W.feel[r.q2],null,null,null);
   addWhy(posTitle,W.pos,null,null,null);
   if(r.showTemp){
@@ -351,21 +357,21 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
     var bPill=isPrimary?(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available'):(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade');
     addWhy(spec?'You Said You Wake Up With Back Pain':'You deal with back pain',W.backDesc,W.backLabel,bPill,isPrimary?'fp-gradient':'fp-light');
   }
-  body.appendChild(whyWrap);
-  card.appendChild(body);
+  card.appendChild(whySec);
 
-  var accWrap=document.createElement('div');accWrap.className='acc-wrap';
+  // Accordion
   var toggle=document.createElement('div');
-  toggle.className='acc-toggle'+(accOpen?' open':'');
+  toggle.className=accOpen?'acc-toggle open':'acc-toggle';
   toggle.id='abtn-'+cid;
   var lbl=document.createElement('span');lbl.id='albl-'+cid;lbl.textContent=accOpen?'Hide Construction Details':'View Construction Details';
-  var arr=document.createElement('span');arr.className='acc-arrow';arr.id='aarr-'+cid;arr.innerHTML='&#8964;';arr.style.transform=accOpen?'rotate(180deg)':'none';
+  var arr=document.createElement('span');arr.className='acc-arrow';arr.id='aarr-'+cid;
+  arr.innerHTML='&#8964;';arr.style.transform=accOpen?'rotate(180deg)':'none';
   toggle.appendChild(lbl);toggle.appendChild(arr);
   toggle.onclick=function(){toggleAcc(cid,toggle);};
-  accWrap.appendChild(toggle);
+  card.appendChild(toggle);
 
   var accBody=document.createElement('div');
-  accBody.className='acc-body'+(accOpen?' open':'');
+  accBody.className=accOpen?'acc-body open':'acc-body';
   accBody.id=cid;
   var profEl=document.createElement('div');profEl.className='acc-profile';profEl.textContent=profile;
   accBody.appendChild(profEl);
@@ -381,14 +387,17 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
     lay.appendChild(ln);lay.appendChild(ld);
     accBody.appendChild(lay);
   });
-  accWrap.appendChild(accBody);
-  card.appendChild(accWrap);
+  card.appendChild(accBody);
 
-  var trust=document.createElement('div');trust.className='trust-row';
+  // Trust row
+  var trust=document.createElement('div');
+  trust.className='trust-row';
   trust.innerHTML='<div class="trust-item"><span class="trust-val">120 Nights</span><span class="trust-label">Risk-free trial</span></div><div class="trust-item"><span class="trust-val">Free</span><span class="trust-label">Shipping &amp; returns</span></div><div class="trust-item"><span class="trust-val">Limited</span><span class="trust-label">Lifetime warranty</span></div>';
   card.appendChild(trust);
 
-  var price=document.createElement('div');price.className='price-row';
+  // Price row
+  var price=document.createElement('div');
+  price.className='price-row';
   price.innerHTML='<div><span class="price-starting">Starting at</span><span class="price-main">Queen: $1,649.75</span><span class="price-was">($1,373.75)</span></div><div class="price-right"><button class="shop-btn">Shop Now</button><span class="price-link">Pricing Details</span></div>';
   card.appendChild(price);
 
@@ -401,6 +410,10 @@ function toggleAcc(id,el){
   el.classList.toggle('open',open);
   document.getElementById('albl-'+id).textContent=open?'Hide Construction Details':'View Construction Details';
   document.getElementById('aarr-'+id).style.transform=open?'rotate(180deg)':'none';
+  document.querySelectorAll('.acc-body').forEach(function(b){open?b.classList.add('open'):b.classList.remove('open');});
+  document.querySelectorAll('.acc-toggle').forEach(function(t){open?t.classList.add('open'):t.classList.remove('open');});
+  document.querySelectorAll('[id^="albl-"]').forEach(function(l){l.textContent=open?'Hide Construction Details':'View Construction Details';});
+  document.querySelectorAll('[id^="aarr-"]').forEach(function(a){a.style.transform=open?'rotate(180deg)':'none';});
 }
 
 function showResult(){
@@ -418,7 +431,7 @@ function renderResult(){
   var row=document.getElementById('cards-row');
   row.innerHTML='';
   order.forEach(function(t,i){
-    row.appendChild(buildCard(r,t,badges[t],i===0,variant,i===0));
+    row.appendChild(buildCard(r,t,i===0?'Best Match':badges[t],i===0,variant,i===0));
   });
 }
 
