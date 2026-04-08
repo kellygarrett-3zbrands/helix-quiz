@@ -46,13 +46,14 @@ body{font-family:'Nunito Sans',sans-serif;min-height:100vh;background:linear-gra
 
 /* RESULT */
 #result-screen{display:none;min-height:calc(100vh - 57px);padding-bottom:80px}
+.result-inner{max-width:980px;margin:0 auto;width:100%}
 .result-top{padding:28px 28px 6px}
 .result-kicker{font-size:13px;font-weight:400;color:#444;margin-bottom:3px}
 .result-headline{font-size:30px;font-weight:800;color:#2E3339}
 .result-headline em{font-family:'Libre Baskerville',serif;font-style:italic;font-weight:400}
 
 .variant-bar{display:flex;gap:8px;padding:10px 28px 14px}
-.vtab{padding:6px 16px;border-radius:20px;border:1.5px solid rgba(255,255,255,.7);font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#2E3339}
+.vtab{padding:7px 18px;border-radius:20px;border:1.5px solid #002E66;font-size:12px;font-weight:700;cursor:pointer;background:transparent;color:#002E66}
 .vtab.active{background:#002E66;color:#fff;border-color:#002E66}
 
 .cards-row{display:flex;gap:14px;padding:0 28px 20px;overflow-x:auto;align-items:flex-start}
@@ -156,6 +157,7 @@ body{font-family:'Nunito Sans',sans-serif;min-height:100vh;background:linear-gra
 
 <!-- RESULT -->
 <div id="result-screen">
+  <div class="result-inner">
   <div class="result-top">
     <div class="result-kicker">Your Perfect Mattress Match:</div>
     <div class="result-headline" id="res-headline"></div>
@@ -165,6 +167,7 @@ body{font-family:'Nunito Sans',sans-serif;min-height:100vh;background:linear-gra
     <div class="vtab" onclick="setVariant('B',this)">Version B — Plain language</div>
   </div>
   <div class="cards-row" id="cards-row"></div>
+  </div>
   <div class="bottom-nav" style="position:fixed;bottom:0;left:0;right:0">
     <button class="btn-back" onclick="restart()" style="opacity:1">&#8249;</button>
     <button class="btn-next" onclick="restart()">Retake quiz</button>
@@ -415,7 +418,7 @@ function renderResult(){
   const order=r.tier==='Luxe'?['Luxe','Elite','Core']:r.tier==='Elite'?['Elite','Luxe','Core']:['Core','Luxe','Elite'];
   const badges={Luxe:'Best Match',Elite:'Most Luxurious',Core:'Best Value'};
   document.getElementById('cards-row').innerHTML=order.map((t,i)=>
-    buildCard(r,t,i===0?'Best Match':badges[t],i===0,variant,i===0)
+    buildCard(r,t,badges[t],i===0,variant,i===0)
   ).join('');
 }
 
