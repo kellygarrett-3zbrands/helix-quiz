@@ -3,130 +3,129 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Nunito Sans',sans-serif;min-height:100vh;background:linear-gradient(160deg,#EAEAEA 16%,#A3B8CB 92%);color:#2E3339}
+body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAEAEA 16%,#A3B8CB 92%);min-height:100vh;color:#2E3339}
 
-/* HEADER */
-.hdr{background:linear-gradient(160deg,#EAEAEA 16%,#A3B8CB 92%);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #fff;position:sticky;top:0;z-index:100}
+/* ── HEADER ── */
+.hdr{background:linear-gradient(160deg,#EAEAEA 16%,#A3B8CB 92%);border-bottom:1.5px solid #fff;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
 .logo-wrap{display:flex;flex-direction:column;align-items:center;gap:4px}
-.logo-text{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:800;letter-spacing:.25em;color:#002E66}
-.close-btn{width:34px;height:34px;border-radius:50%;background:#002E66;border:none;cursor:pointer;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'Nunito Sans',sans-serif}
+.logo-text{font-size:11px;font-weight:800;letter-spacing:.25em;color:#002E66}
+.close-btn{width:36px;height:36px;border-radius:50%;background:#002E66;border:none;cursor:pointer;color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center}
 
-/* QUIZ */
-#quiz-screen{display:flex;flex-direction:column;min-height:calc(100vh - 57px)}
-.quiz-body{flex:1;display:flex;gap:40px;align-items:flex-start;justify-content:center;padding:52px 32px;max-width:1000px;margin:0 auto;width:100%}
-.q-panel{background:#fff;border-radius:14px;padding:28px 24px;width:340px;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-.q-counter{font-size:12px;font-weight:600;color:#444;margin-bottom:8px}
-.prog-track{height:5px;background:#e2e8f0;border-radius:3px;margin-bottom:22px;overflow:hidden}
-.prog-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#002E66 0%,#A3B8CB 100%);transition:width .35s}
-.q-title{font-size:24px;font-weight:800;line-height:1.2;margin-bottom:10px;color:#2E3339}
-.q-sub{font-size:13px;font-weight:400;color:#444;line-height:1.55;margin-bottom:20px}
-.q-footer-divider{border-top:1px solid #f1f1f1;padding-top:14px;display:flex;gap:18px}
-.q-footer-link{font-size:12px;font-weight:700;color:#002E66;cursor:pointer}
+/* ── BOTTOM NAV ── */
+.bottom-nav{background:#FFFFFF;border-top:1px solid #e5e7eb;height:96px;display:flex;justify-content:center;align-items:center;gap:12px;position:sticky;bottom:0;z-index:100}
+.btn-back{height:48px;width:56px;border-radius:11px;border:2px solid #002E66;background:#FFFFFF;cursor:pointer;color:#002E66;font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito Sans',sans-serif}
+.btn-back:disabled{opacity:.3;cursor:not-allowed}
+.btn-next{background:#002E66;color:#FFFFFF;border:none;border-radius:11px;height:48px;width:300px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Nunito Sans',sans-serif}
+.btn-next:disabled{opacity:.3;cursor:not-allowed}
 
-.opts-panel{flex:1;display:flex;flex-direction:column;gap:10px;padding-top:4px}
-.opt-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;padding:16px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:border-color .15s;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.opt-card:hover{border-color:#A3B8CB}
+/* ── QUIZ SCREEN ── */
+#quiz-screen{display:flex;flex-direction:column;min-height:calc(100vh - 61px)}
+.quiz-body{flex:1;display:flex;gap:40px;align-items:flex-start;justify-content:center;padding:40px;max-width:1100px;margin:0 auto;width:100%}
+
+.q-panel{background:#FFFFFF;border-radius:14px;padding:24px;width:360px;flex-shrink:0}
+.q-counter{font-size:12px;font-weight:600;color:#444444;margin-bottom:8px}
+.prog-track{height:5px;background:#e2e8f0;border-radius:3px;margin-bottom:20px;overflow:hidden}
+.prog-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#002E66 0%,#94a3b8 100%);transition:width .3s}
+.q-title{font-size:22px;font-weight:800;line-height:1.25;color:#2E3339;margin-bottom:10px}
+.q-sub{font-size:13px;color:#444444;line-height:1.55;margin-bottom:18px}
+
+.compare-card{background:#F1F1F1;border-radius:11px;padding:16px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.cc-title{font-size:13px;font-weight:700;color:#2E3339;margin-bottom:4px}
+.cc-sub{font-size:12px;color:#444444;line-height:1.45}
+.info-circle{width:20px;height:20px;border-radius:50%;border:1.5px solid #444444;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#444444;flex-shrink:0;margin-top:1px}
+
+.q-footer{border-top:1px solid #e5e7eb;padding-top:14px;display:flex;gap:28px}
+.footer-btn{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:12px;font-weight:700;color:#002E66;cursor:pointer;text-decoration:underline;text-underline-offset:2px;background:none;border:none;font-family:'Nunito Sans',sans-serif}
+.footer-btn svg{width:20px;height:20px;fill:none;stroke:#002E66;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+.opts-panel{flex:1;display:flex;flex-direction:column;gap:10px}
+.opt-card{background:#FFFFFF;border:2px solid transparent;border-radius:11px;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:border-color .15s;box-shadow:0 2px 8px rgba(0,0,0,.1);min-height:72px}
+.opt-card:hover{border-color:#94a3b8}
 .opt-card.selected{border-color:#002E66}
-.opt-title{font-size:14px;font-weight:700;color:#2E3339;margin-bottom:2px}
-.opt-desc{font-size:12px;font-weight:400;color:#444;line-height:1.4}
-.opt-box{width:20px;height:20px;border-radius:4px;border:1.5px solid #cbd5e1;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s}
-.opt-card.selected .opt-box{background:#002E66;border-color:#002E66}
+.opt-title{font-size:14px;font-weight:700;color:#2E3339;margin-bottom:3px}
+.opt-desc{font-size:12px;color:#444444;line-height:1.4}
+.opt-check{width:20px;height:20px;border-radius:4px;flex-shrink:0;display:none;align-items:center;justify-content:center;margin-top:1px;background:#002E66}
+.opt-card.selected .opt-check{display:flex}
 .chk{display:none}
 .opt-card.selected .chk{display:block}
 
-/* BOTTOM NAV */
-.bottom-nav{background:linear-gradient(160deg,#EAEAEA 16%,#A3B8CB 92%);border-top:1.5px solid #fff;padding:14px 24px;display:flex;justify-content:center;align-items:center;gap:10px;position:sticky;bottom:0}
-.btn-back{height:44px;padding:0 20px;border-radius:11px;border:none;background:#fff;cursor:pointer;font-size:20px;color:#002E66;display:flex;align-items:center;justify-content:center;font-family:'Nunito Sans',sans-serif;font-weight:400;min-width:52px}
-.btn-back:disabled{opacity:.3;cursor:not-allowed}
-.btn-next{background:#fff;color:#002E66;border:none;border-radius:11px;padding:0 48px;height:44px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Nunito Sans',sans-serif}
-.btn-next:disabled{opacity:.3;cursor:not-allowed}
+/* ── RESULT SCREEN ── */
+#result-screen{display:none;min-height:calc(100vh - 61px);padding-bottom:96px}
+.result-inner{max-width:1440px;margin:0 auto;padding:28px 28px 0}
+.res-kicker{font-size:13px;color:#444444;margin-bottom:4px}
+.res-headline{font-size:30px;font-weight:800;color:#2E3339}
+.res-headline em{font-family:'Libre Baskerville',serif;font-style:italic;font-weight:400}
 
-/* RESULT */
-#result-screen{display:none;min-height:calc(100vh - 57px);padding-bottom:80px}
-.result-inner{max-width:980px;margin:0 auto;width:100%}
-.result-top{padding:28px 28px 6px}
-.result-kicker{font-size:13px;font-weight:400;color:#444;margin-bottom:3px}
-.result-headline{font-size:30px;font-weight:800;color:#2E3339}
-.result-headline em{font-family:'Libre Baskerville',serif;font-style:italic;font-weight:400}
+.variant-bar{display:flex;gap:8px;padding:12px 28px}
+.vtab{padding:7px 18px;border-radius:20px;border:1.5px solid #002E66;font-size:12px;font-weight:700;cursor:pointer;background:transparent;color:#002E66;font-family:'Nunito Sans',sans-serif}
+.vtab.active{background:#002E66;color:#FFFFFF;border-color:#002E66}
 
-.variant-bar{display:flex;gap:8px;padding:10px 28px 14px}
-.vtab{padding:7px 18px;border-radius:20px;border:1.5px solid #002E66;font-size:12px;font-weight:700;cursor:pointer;background:transparent;color:#002E66}
-.vtab.active{background:#002E66;color:#fff;border-color:#002E66}
-
-.cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 28px 20px;align-items:flex-start}
-
-/* CARDS */
-.mat-card{background:#fff;border-radius:14px;overflow:hidden;border:2px solid #e2e8f0;display:flex;flex-direction:column;box-shadow:0 2px 8px rgba(0,0,0,.06);width:100%}
+.cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 28px 24px}
+.mat-card{background:#FFFFFF;border-radius:14px;overflow:hidden;border:2px solid #e2e8f0;display:flex;flex-direction:column}
 .mat-card.primary{border-color:#002E66}
-.card-img{width:100%;height:170px;object-fit:cover;background:#e8ecf0;display:block}
-.card-img-ph{width:100%;height:170px;background:linear-gradient(180deg,#d4dce6,#b8c8d8);display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a8fa3;font-style:italic;font-family:'Nunito Sans',sans-serif}
 
+.card-img-ph{width:100%;height:180px;background:linear-gradient(180deg,#d4dce6,#b8c8d8);display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a8fa3;font-style:italic}
 .card-body{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
-.badge-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:2px}
-.badge{font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;letter-spacing:.02em;font-family:'Nunito Sans',sans-serif}
-.badge-primary{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#fff}
-.badge-secondary{background:#f1f1f1;color:#444}
-
-.card-kicker{font-size:11px;font-weight:400;color:#444;margin-bottom:1px}
-.card-name{font-size:20px;font-weight:800;color:#2E3339;line-height:1.15}
-.card-name em{font-family:'Libre Baskerville',serif;font-style:italic;font-weight:400;color:#2E3339}
-.stars-row{display:flex;align-items:center;gap:5px;font-size:13px}
-.stars{color:#f59e0b;letter-spacing:1px}
+.badge-row{display:flex;justify-content:space-between;align-items:center}
+.badge{font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px}
+.badge-primary{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF}
+.badge-secondary{background:#F1F1F1;color:#444444}
+.card-kicker{font-size:11px;color:#444444}
+.card-name{font-size:20px;font-weight:800;color:#2E3339;line-height:1.2}
+.card-name em{font-family:'Libre Baskerville',serif;font-style:italic;font-weight:400}
+.stars-row{display:flex;align-items:center;gap:5px}
+.stars{color:#f59e0b;font-size:13px}
 .review-link{font-size:12px;font-weight:600;color:#002E66;text-decoration:underline;cursor:pointer}
 
 .why-head{font-size:13px;font-weight:700;color:#2E3339;margin-bottom:6px}
-.why-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:9px}
+.why-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
 .wi-icon{width:22px;height:22px;border-radius:50%;background:#22c55e;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center}
 .wi-icon svg{width:11px;height:11px}
 .wi-title{font-size:13px;font-weight:700;color:#2E3339;line-height:1.3}
-.wi-desc{font-size:12px;font-weight:400;color:#444;line-height:1.45;margin-top:1px}
+.wi-desc{font-size:12px;color:#444444;line-height:1.45;margin-top:1px}
 .feat-label{font-size:11px;font-weight:700;color:#2E3339;margin-top:5px;margin-bottom:3px}
-.feat-pill{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;cursor:default;line-height:1;font-family:'Nunito Sans',sans-serif}
-.fp-gradient{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#fff}
-.fp-light{background:#f1f1f1;border:1px solid #e2e8f0;color:#2E3339}
+.feat-pill{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;font-family:'Nunito Sans',sans-serif}
+.fp-gradient{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF}
+.fp-light{background:#F1F1F1;border:1px solid #e2e8f0;color:#2E3339}
 
-/* ACCORDION */
-.acc-wrap{padding:0 16px 14px;border-top:1px solid #f1f1f1;padding-top:0}
-.acc-toggle{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;font-size:12px;font-weight:700;color:#2E3339;cursor:pointer;background:#fafafa;user-select:none;border:1px solid #e2e8f0;border-radius:8px;margin:12px 0 0}
+.acc-wrap{padding:0 16px 14px;border-top:1px solid #F1F1F1}
+.acc-toggle{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;font-size:12px;font-weight:700;color:#2E3339;cursor:pointer;background:#fafafa;border:1px solid #e2e8f0;border-radius:8px;margin:12px 0 0;user-select:none}
 .acc-toggle.open{border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-color:transparent}
-.acc-arrow{font-size:12px;color:#444;transition:transform .2s}
-.acc-body{display:none;background:#fff;border:1px solid #e2e8f0;border-top:none;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden}
+.acc-arrow{font-size:12px;color:#444444;transition:transform .2s}
+.acc-body{display:none;background:#FFFFFF;border:1px solid #e2e8f0;border-top:none;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden}
 .acc-body.open{display:block}
-.acc-profile{font-size:11px;font-weight:600;color:#444;padding:8px 12px 4px}
-.acc-render{width:100%;display:block;border-bottom:1px solid #f1f1f1}
-.acc-render-ph{width:100%;height:120px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:11px;color:#94a3b8;border-bottom:1px solid #f1f1f1;font-family:'Nunito Sans',sans-serif}
+.acc-profile{font-size:11px;font-weight:600;color:#444444;padding:8px 12px 4px}
+.acc-render-ph{width:100%;height:120px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:11px;color:#94a3b8;border-bottom:1px solid #F1F1F1}
 .acc-layer{padding:6px 12px;border-bottom:1px solid #f8f8f8}
 .acc-layer:last-child{border-bottom:none}
 .acc-layer-name{font-size:12px;font-weight:700;color:#2E3339;margin-bottom:1px}
-.acc-layer-desc{font-size:11px;font-weight:400;color:#444;line-height:1.4}
+.acc-layer-desc{font-size:11px;color:#444444;line-height:1.4}
 
-/* TRUST + PRICE */
-.trust-row{display:flex;justify-content:space-between;padding:10px 16px;border-top:1px solid #f1f1f1;background:#fafafa}
+.trust-row{display:flex;justify-content:space-between;padding:10px 16px;border-top:1px solid #F1F1F1;background:#fafafa}
 .trust-item{text-align:center}
 .trust-val{font-size:11px;font-weight:700;color:#2E3339;display:block}
-.trust-label{font-size:10px;font-weight:400;color:#444;display:block;margin-top:1px}
+.trust-label{font-size:10px;color:#444444;display:block;margin-top:1px}
 
-.price-row{padding:12px 16px;border-top:1px solid #f1f1f1;display:flex;justify-content:space-between;align-items:flex-start}
-.price-left{}
-.price-starting{font-size:10px;font-weight:400;color:#444;display:block;margin-bottom:2px}
+.price-row{padding:12px 16px;border-top:1px solid #F1F1F1;display:flex;justify-content:space-between;align-items:flex-start}
+.price-starting{font-size:10px;color:#444444;display:block;margin-bottom:2px}
 .price-main{font-size:15px;font-weight:800;color:#2E3339;display:block}
-.price-was{font-size:11px;font-weight:400;color:#94a3b8;text-decoration:line-through;display:block;margin-top:1px}
+.price-was{font-size:11px;color:#94a3b8;text-decoration:line-through;display:block;margin-top:1px}
 .price-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
-.shop-btn{background:#002E66;color:#fff;border:none;border-radius:8px;padding:10px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Nunito Sans',sans-serif;white-space:nowrap}
-.price-link{font-size:11px;font-weight:600;color:#002E66;text-decoration:underline;cursor:pointer;text-align:right}
+.shop-btn{background:#002E66;color:#FFFFFF;border:none;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Nunito Sans',sans-serif}
+.price-link{font-size:11px;font-weight:600;color:#002E66;text-decoration:underline;cursor:pointer}
 </style>
 </head>
 <body>
 
 <div class="hdr">
   <div class="logo-wrap">
-    <svg width="32" height="28" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="38" height="32" rx="1" stroke="#002E66" stroke-width="2.2" fill="none"/>
-      <line x1="1" y1="12" x2="39" y2="12" stroke="#002E66" stroke-width="2.2"/>
-      <line x1="1" y1="22" x2="39" y2="22" stroke="#002E66" stroke-width="2.2"/>
+    <svg width="32" height="26" viewBox="0 0 40 32" fill="none">
+      <rect x="1" y="1" width="38" height="30" rx="1" stroke="#002E66" stroke-width="2.2" fill="none"/>
+      <line x1="1" y1="11" x2="39" y2="11" stroke="#002E66" stroke-width="2.2"/>
+      <line x1="1" y1="21" x2="39" y2="21" stroke="#002E66" stroke-width="2.2"/>
     </svg>
     <span class="logo-text">HELIX</span>
   </div>
@@ -142,25 +141,25 @@ body{font-family:'Nunito Sans',sans-serif;min-height:100vh;background:linear-gra
       <div class="q-title" id="q-title"></div>
       <div class="q-sub" id="q-sub"></div>
       <div class="compare-card">
-        <div class="compare-card-text">
+        <div>
           <div class="cc-title">See our mattresses side-by-side</div>
           <div class="cc-sub">Use the interactive comparison tool and explore your favorite Helix mattress models.</div>
         </div>
-        <div class="info-icon">i</div>
+        <div class="info-circle">i</div>
       </div>
-      <div class="q-footer-divider">
-        <div class="q-footer-link">
-          <div class="footer-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div class="q-footer">
+        <button class="footer-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           Chat
-        </div>
-        <div class="q-footer-link">
-          <div class="footer-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        </button>
+        <button class="footer-btn">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
           Compare
-        </div>
-        <div class="q-footer-link">
-          <div class="footer-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        </button>
+        <button class="footer-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Save
-        </div>
+        </button>
       </div>
     </div>
     <div class="opts-panel" id="opts-panel"></div>
@@ -174,18 +173,16 @@ body{font-family:'Nunito Sans',sans-serif;min-height:100vh;background:linear-gra
 <!-- RESULT -->
 <div id="result-screen">
   <div class="result-inner">
-  <div class="result-top">
-    <div class="result-kicker">Your Perfect Mattress Match:</div>
-    <div class="result-headline" id="res-headline"></div>
+    <div class="res-kicker">Your Perfect Mattress Match:</div>
+    <div class="res-headline" id="res-headline"></div>
   </div>
   <div class="variant-bar">
     <div class="vtab active" onclick="setVariant('A',this)">Version A — Spec language</div>
     <div class="vtab" onclick="setVariant('B',this)">Version B — Plain language</div>
   </div>
   <div class="cards-row" id="cards-row"></div>
-  </div>
   <div class="bottom-nav" style="position:fixed;bottom:0;left:0;right:0">
-    <button class="btn-back" onclick="restart()" style="opacity:1">&#8249;</button>
+    <button class="btn-back" onclick="restart()">&#8249;</button>
     <button class="btn-next" onclick="restart()">Retake quiz</button>
   </div>
 </div>
@@ -193,10 +190,10 @@ body{font-family:'Nunito Sans',sans-serif;min-height:100vh;background:linear-gra
 <script>
 const Qs=[
   {id:'q1',title:'What\'s your primary sleep position?',sub:'Your sleep position helps us find which mattress will give you the best support where you need it most.',opts:[
-    {val:'Side',label:'Side sleeper',desc:'You spend most of the night on your side.'},
-    {val:'Back',label:'Back sleeper',desc:'You spend most of the night on your back.'},
-    {val:'Stomach',label:'Stomach sleeper',desc:'You spend most of the night on your stomach.'},
-    {val:'Toss and Turn',label:'Combination sleeper',desc:'You move around throughout the night.'}
+    {val:'Side',label:'Side sleeper',desc:'You fall asleep or wake up on your side.'},
+    {val:'Back',label:'Back sleeper',desc:'You fall asleep or wake up on your back.'},
+    {val:'Stomach',label:'Stomach sleeper',desc:'You fall asleep or wake up on your stomach.'},
+    {val:'Toss and Turn',label:'Toss and Turn',desc:'You move around a lot throughout the night.'}
   ]},
   {id:'q2',title:'What type of mattress feel do you prefer?',sub:'Your feel preference plays a role in how soft or firm the top of your perfect mattress will be.',opts:[
     {val:'Soft',label:'Soft feel',desc:'Soft top of your mattress that lets you sink in like a cloud.'},
@@ -235,7 +232,7 @@ function render(){
   q.opts.forEach(o=>{
     const d=document.createElement('div');
     d.className='opt-card'+(answers[q.id]===o.val?' selected':'');
-    d.innerHTML=`<div><div class="opt-title">${o.label}</div><div class="opt-desc">${o.desc}</div></div><div class="opt-box"><svg class="chk" viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
+    d.innerHTML=`<div><div class="opt-title">${o.label}</div><div class="opt-desc">${o.desc}</div></div><div class="opt-check"><svg class="chk" viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
     d.onclick=()=>{answers[q.id]=o.val;render();};
     panel.appendChild(d);
   });
@@ -259,7 +256,7 @@ function calcResult(){
 
 const LAYERS={
   Luxe:[
-    {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth Tencel Cover, or upgrade to our GlacioTex Cooling Cover.'},
+    {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth Tencel Cover, or upgrade to GlacioTex Cooling Cover.'},
     {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
     {n:'Ultra-Supportive Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4× the long-lasting, cradling comfort.'},
     {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam made for your feel preference, balancing cushioning and support.'},
@@ -310,58 +307,29 @@ const plainWhy={
 const posLabel={Side:'a side sleeper',Back:'a back sleeper',Stomach:'a stomach sleeper','Toss and Turn':'a combination sleeper'};
 const posLabelPlain={Side:'on your side',Back:'on your back',Stomach:'on your stomach','Toss and Turn':'all over the place'};
 
+function chkSvg(){return`<svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;}
+
 function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
   const spec=v==='A';
   const W=spec?specWhy:plainWhy;
   const layers=LAYERS[cardTier]||LAYERS.Core;
   const profile=PROFILES[cardTier]||'';
   const cid=`acc_${cardTier}_${Math.random().toString(36).slice(2,7)}`;
-  const imgKey=cardTier==='Elite'?'Elite':`${r.base}_${cardTier}`;
-  const renderKey=`${imgKey}_layers`;
 
   const feelTitle=spec?`You Prefer A ${r.q2} Feel`:`You Like A ${r.q2} Feel`;
   const posTitle=spec?`You Said You Are ${posLabel[r.q1]}`:`You Sleep ${posLabelPlain[r.q1]}`;
 
   let whyHtml=`
-    <div class="why-item">
-      <div class="wi-icon"><svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="wi-text"><div class="wi-title">${feelTitle}</div><div class="wi-desc">${W.feel[r.q2]}</div></div>
-    </div>
-    <div class="why-item">
-      <div class="wi-icon"><svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="wi-text"><div class="wi-title">${posTitle}</div><div class="wi-desc">${W.pos}</div></div>
-    </div>`;
+    <div class="why-item"><div class="wi-icon">${chkSvg()}</div><div><div class="wi-title">${feelTitle}</div><div class="wi-desc">${W.feel[r.q2]}</div></div></div>
+    <div class="why-item"><div class="wi-icon">${chkSvg()}</div><div><div class="wi-title">${posTitle}</div><div class="wi-desc">${W.pos}</div></div></div>`;
 
   if(r.showTemp){
-    const pillText=isPrimary
-      ?(spec?'+ GlacioTex + CoolForce™ Available as Upgrades':'+ Cooling upgrades available')
-      :(spec?'+ GlacioTex + CoolForce™ Available as Upgrades':'+ Cooling upgrades available');
-    whyHtml+=`
-    <div class="why-item">
-      <div class="wi-icon"><svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="wi-text">
-        <div class="wi-title">${spec?`You Sleep Hot ${r.q4}`:'You tend to sleep hot'}</div>
-        <div class="wi-desc">${W.tempDesc}</div>
-        <div class="feat-label">${W.tempLabel}</div>
-        <span class="feat-pill ${isPrimary?'fp-gradient':'fp-light'}">${pillText}</span>
-      </div>
-    </div>`;
+    const pillText=isPrimary?(spec?'+ GlacioTex + CoolForce™ Available as Upgrades':'+ Cooling upgrades available'):(spec?'+ GlacioTex Available as Upgrade':'+ Cooling upgrade available');
+    whyHtml+=`<div class="why-item"><div class="wi-icon">${chkSvg()}</div><div><div class="wi-title">${spec?`You Sleep Hot ${r.q4}`:'You tend to sleep hot'}</div><div class="wi-desc">${W.tempDesc}</div><div class="feat-label">${W.tempLabel}</div><span class="feat-pill ${isPrimary?'fp-gradient':'fp-light'}">${pillText}</span></div></div>`;
   }
-
   if(r.showBackPain){
-    const pillText=isPrimary
-      ?(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available')
-      :(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available');
-    whyHtml+=`
-    <div class="why-item">
-      <div class="wi-icon"><svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="wi-text">
-        <div class="wi-title">${spec?'You Said You Wake Up With Back Pain':'You deal with back pain'}</div>
-        <div class="wi-desc">${W.backDesc}</div>
-        <div class="feat-label">${W.backLabel}</div>
-        <span class="feat-pill ${isPrimary?'fp-gradient':'fp-light'}">${pillText}</span>
-      </div>
-    </div>`;
+    const pillText=isPrimary?(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available'):(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available');
+    whyHtml+=`<div class="why-item"><div class="wi-icon">${chkSvg()}</div><div><div class="wi-title">${spec?'You Said You Wake Up With Back Pain':'You deal with back pain'}</div><div class="wi-desc">${W.backDesc}</div><div class="feat-label">${W.backLabel}</div><span class="feat-pill ${isPrimary?'fp-gradient':'fp-light'}">${pillText}</span></div></div>`;
   }
 
   const layerHtml=layers.map((l,i)=>`<div class="acc-layer"><div class="acc-layer-name">${i+1}. ${l.n}</div><div class="acc-layer-desc">${l.d}</div></div>`).join('');
@@ -370,27 +338,19 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
   <div class="mat-card${isPrimary?' primary':''}">
     <div class="card-img-ph">[ ${r.base} ${cardTier} image ]</div>
     <div class="card-body">
-      <div class="badge-row">
-        <span class="badge ${isPrimary?'badge-primary':'badge-secondary'}">${badgeText}</span>
-      </div>
-      <div>
-        <div class="card-kicker">${isPrimary?'Your Perfect Match:':'You May Also Like:'}</div>
-        <div class="card-name">Helix ${r.base} <em>${cardTier}</em></div>
-      </div>
+      <div class="badge-row"><span class="badge ${isPrimary?'badge-primary':'badge-secondary'}">${badgeText}</span></div>
+      <div><div class="card-kicker">${isPrimary?'Your Perfect Match:':'You May Also Like:'}</div><div class="card-name">Helix ${r.base} <em>${cardTier}</em></div></div>
       <div class="stars-row"><span class="stars">★★★★★</span><span class="review-link">10,000 Reviews</span></div>
-      <div>
-        <div class="why-head">Why You'll Love It:</div>
-        ${whyHtml}
-      </div>
+      <div><div class="why-head">Why You'll Love It:</div>${whyHtml}</div>
     </div>
     <div class="acc-wrap">
-      <div class="acc-toggle${accOpen?' open':''}" id="acc-btn-${cid}" onclick="toggleAcc('${cid}',this)">
-        <span id="acc-label-${cid}">${accOpen?'Hide Construction Details':'View Construction Details'}</span>
-        <span class="acc-arrow" id="acc-arr-${cid}" style="transform:${accOpen?'rotate(180deg)':'rotate(0deg)'}">&#8964;</span>
+      <div class="acc-toggle${accOpen?' open':''}" id="abtn-${cid}" onclick="toggleAcc('${cid}',this)">
+        <span id="albl-${cid}">${accOpen?'Hide Construction Details':'View Construction Details'}</span>
+        <span class="acc-arrow" id="aarr-${cid}" style="transform:${accOpen?'rotate(180deg)':'none'}">&#8964;</span>
       </div>
       <div class="acc-body${accOpen?' open':''}" id="${cid}">
         <div class="acc-profile">${profile}</div>
-        <div class="acc-render-ph">[ ${renderKey} render image ]</div>
+        <div class="acc-render-ph">[ ${r.base}_${cardTier}_layers render ]</div>
         ${layerHtml}
       </div>
     </div>
@@ -400,15 +360,8 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
       <div class="trust-item"><span class="trust-val">Limited</span><span class="trust-label">Lifetime warranty</span></div>
     </div>
     <div class="price-row">
-      <div class="price-left">
-        <span class="price-starting">Starting at</span>
-        <span class="price-main">Queen: $1,649.75</span>
-        <span class="price-was">($1,373.75)</span>
-      </div>
-      <div class="price-right">
-        <button class="shop-btn">Shop Now</button>
-        <span class="price-link">Pricing Details</span>
-      </div>
+      <div><span class="price-starting">Starting at</span><span class="price-main">Queen: $1,649.75</span><span class="price-was">($1,373.75)</span></div>
+      <div class="price-right"><button class="shop-btn">Shop Now</button><span class="price-link">Pricing Details</span></div>
     </div>
   </div>`;
 }
@@ -417,8 +370,8 @@ function toggleAcc(id,el){
   const body=document.getElementById(id);
   const open=body.classList.toggle('open');
   el.classList.toggle('open',open);
-  document.getElementById('acc-label-'+id).textContent=open?'Hide Construction Details':'View Construction Details';
-  document.getElementById('acc-arr-'+id).style.transform=open?'rotate(180deg)':'rotate(0deg)';
+  document.getElementById('albl-'+id).textContent=open?'Hide Construction Details':'View Construction Details';
+  document.getElementById('aarr-'+id).style.transform=open?'rotate(180deg)':'none';
 }
 
 function showResult(){
@@ -433,9 +386,7 @@ function renderResult(){
   document.getElementById('res-headline').innerHTML=`Helix ${r.base} <em>${r.tier}</em>`;
   const order=r.tier==='Luxe'?['Luxe','Elite','Core']:r.tier==='Elite'?['Elite','Luxe','Core']:['Core','Luxe','Elite'];
   const badges={Luxe:'Best Match',Elite:'Most Luxurious',Core:'Best Value'};
-  document.getElementById('cards-row').innerHTML=order.map((t,i)=>
-    buildCard(r,t,badges[t],i===0,variant,i===0)
-  ).join('');
+  document.getElementById('cards-row').innerHTML=order.map((t,i)=>buildCard(r,t,badges[t],i===0,variant,i===0)).join('');
 }
 
 function setVariant(v,el){
