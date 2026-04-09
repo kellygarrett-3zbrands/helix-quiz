@@ -28,7 +28,6 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 .info-circle{width:20px;height:20px;border-radius:50%;border:1.5px solid #444;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#444;flex-shrink:0;margin-top:1px}
 .q-footer{border-top:1px solid #e5e7eb;padding-top:14px;display:flex;gap:28px}
 .footer-btn{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:12px;font-weight:700;color:#002E66;cursor:pointer;text-decoration:underline;text-underline-offset:2px;background:none;border:none;font-family:'Nunito Sans',sans-serif}
-.footer-btn img{width:20px;height:20px}
 .opts-panel{flex:1;display:flex;flex-direction:column;gap:10px}
 .opt-card{background:#FFFFFF;border:none;border-radius:11px;padding:16px;cursor:pointer;display:grid;grid-template-columns:1fr 28px;align-items:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,.1);min-height:98px;outline:2px solid transparent;outline-offset:0;transition:outline-color .15s}
 .opt-card:hover{outline-color:#94a3b8}
@@ -38,8 +37,6 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 .opt-check{width:22px;height:22px;border-radius:5px;background:#002E66;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .15s;justify-self:end}
 .opt-card.selected .opt-check{opacity:1}
 .opt-check svg{width:12px;height:12px;display:block}
-
-/* RESULT SCREEN */
 #result-screen{display:none;min-height:calc(100vh - 61px);padding-bottom:96px}
 .result-inner{max-width:1440px;margin:0 auto;padding:28px 28px 0}
 .res-kicker{font-size:13px;color:#444;margin-bottom:4px}
@@ -49,13 +46,9 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 .vtab{padding:7px 18px;border-radius:20px;border:1.5px solid #002E66;font-size:12px;font-weight:700;cursor:pointer;background:transparent;color:#002E66;font-family:'Nunito Sans',sans-serif}
 .vtab.active{background:#002E66;color:#FFFFFF}
 .cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 28px 24px;align-items:start}
-
-/* CARD */
 .mat-card{background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;display:flex;flex-direction:column;height:fit-content}
 .mat-card.primary{border:2px solid #002E66}
 .card-img{width:100%;height:240px;object-fit:cover;display:block;background:#d4dce6}
-
-/* CARD HEADER */
 .card-header{padding:16px 20px;border-bottom:1px solid #F1F1F1}
 .card-top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .card-kicker{font-size:11px;color:#444}
@@ -67,8 +60,6 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 .stars-row{display:flex;align-items:center;gap:5px}
 .stars{color:#f59e0b;font-size:13px}
 .review-link{font-size:12px;font-weight:600;color:#002E66;text-decoration:underline;cursor:pointer}
-
-/* WHY SECTION */
 .why-section{padding:16px 20px;border-bottom:1px solid #F1F1F1}
 .why-head{font-size:13px;font-weight:700;color:#2E3339;margin-bottom:12px}
 .why-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}
@@ -77,12 +68,6 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 .wi-icon svg{width:11px;height:11px}
 .wi-title{font-size:13px;font-weight:700;color:#2E3339;line-height:1.3}
 .wi-desc{font-size:12px;color:#444;line-height:1.45;margin-top:2px}
-.feat-label{font-size:11px;font-weight:700;color:#2E3339;margin-top:6px;margin-bottom:4px}
-.feat-pill{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:8px 14px;border-radius:100px;font-family:'Nunito Sans',sans-serif}
-.fp-gradient{background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF}
-.fp-light{background:#F1F1F1;border:1px solid #e2e8f0;color:#2E3339}
-
-/* CONSTRUCTION ACCORDION */
 .acc-toggle{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;font-size:12px;font-weight:700;color:#2E3339;cursor:pointer;background:#FFFFFF;border-top:none;border-bottom:1px solid #F1F1F1;user-select:none}
 .acc-arrow{font-size:12px;color:#444;transition:transform .2s}
 .acc-body{display:none;background:#FFFFFF;border-bottom:1px solid #e2e8f0}
@@ -95,8 +80,6 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 .acc-layer:nth-child(even){background:#FFFFFF}
 .acc-layer-name{font-size:12px;font-weight:700;color:#2E3339;margin-bottom:2px}
 .acc-layer-desc{font-size:11px;color:#444;line-height:1.4}
-
-/* TRUST + PRICE */
 .trust-row{display:flex;justify-content:space-between;padding:12px 20px;background:#FFFFFF;border-top:1px solid #F1F1F1}
 .trust-item{text-align:center}
 .trust-val{font-size:11px;font-weight:700;color:#2E3339;display:block}
@@ -111,7 +94,6 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
 </style>
 </head>
 <body>
-
 <div class="hdr">
   <img src="helix-logo.svg" alt="Helix" style="height:36px;width:auto">
   <button class="close-btn" onclick="restart()">&#10005;</button>
@@ -129,9 +111,9 @@ body{font-family:'Nunito Sans',sans-serif;background:linear-gradient(160deg,#EAE
         <div class="info-circle">i</div>
       </div>
       <div class="q-footer">
-        <button class="footer-btn"><img src="icon-chat.svg" alt="">Chat</button>
-        <button class="footer-btn"><img src="icon-compare.svg" alt="">Compare</button>
-        <button class="footer-btn"><img src="icon-save.svg" alt="">Save</button>
+        <button class="footer-btn">Chat</button>
+        <button class="footer-btn">Compare</button>
+        <button class="footer-btn">Save</button>
       </div>
     </div>
     <div class="opts-panel" id="opts-panel"></div>
@@ -185,17 +167,885 @@ var Qs=[
   ]},
   {id:'q5',title:'What matters most to you in a mattress?',sub:'This helps us match you to the right tier.',opts:[
     {val:'I want the best of the best',label:'I want the best of the best',desc:'Give me the most premium option available, no compromises.'},
-    {val:'I want good quality but it doesn\'t have to be the fanciest',label:'Good quality without the extras',desc:'I want a great mattress without needing the top of the line.'}
+    {val:"I want good quality but it doesn't have to be the fanciest",label:'Good quality without the extras',desc:'I want a great mattress without needing the top of the line.'}
   ]}
 ];
 
-var IMG_EXT={Dawn_Core:'jpg',Dawn_Luxe:'jpg',Dusk_Core:'jpg',Dusk_Luxe:'jpg',Elite:'jpg',Midnight_Core:'jpg',Midnight_Luxe:'jpg',Moonlight_Core:'jpg',Moonlight_Luxe:'jpg',Sunset_Core:'jpg',Sunset_Luxe:'jpg',Twilight_Core:'jpg',Twilight_Luxe:'jpg'};
-var LAYER_EXT={Dawn_Core:'png',Dawn_Luxe:'png',Dusk_Core:'png',Dusk_Luxe:'png',Elite:'png',Midnight_Core:'png',Midnight_Luxe:'png',Moonlight_Core:'png',Moonlight_Luxe:'png',Sunset_Core:'png',Sunset_Luxe:'png',Twilight_Core:'png',Twilight_Luxe:'png'};
-function imgSrc(base,tier){var k=tier==='Elite'?'Elite':base+'_'+tier;return k+'.'+(IMG_EXT[k]||'jpg');}
-function layerSrc(base,tier){var k=tier==='Elite'?'Elite':base+'_'+tier;return k+'_layers.'+(LAYER_EXT[k]||'png');}
+// ─── COPY DATA ────────────────────────────────────────────────────────────────
+// Key: "Model_Tier_Category_AnswerKey"
+// Categories: Firmness, Position, Temperature, BackPain, Budget
+// For each entry: { label: "You Said...", b1: "Bucket 1 desc", b2: "Bucket 2 desc" }
 
-var answers={};
-var cur=0,variant='A',lastResult=null;
+var COPY = {};
+function c(model,tier,cat,ans,label,b1,b2){
+  COPY[model+'_'+tier+'_'+cat+'_'+ans]={label:label,b1:b1,b2:b2};
+}
+
+// ── SUNSET CORE ──
+c('Sunset','Core','Firmness','Soft','You Prefer A Soft Feel',
+  'Crafted with a soft feel — feels plush and gentle with cloud-like cushioning that cradles your body.',
+  'A soft sleep surface that gently contours to your body while still supporting your spine. Designed to feel like you\'re sleeping in the mattress, not on top of it.');
+c('Sunset','Core','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — better sleep by supporting your shoulders and hips, the pressure points side-sleepers often experience.',
+  'Built for side sleepers with foams that provide extra contouring at the shoulders and hips - the two spots where side sleepers feel the most pressure.');
+c('Sunset','Core','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — support that adapts as you switch positions throughout the night.',
+  'Built for sleepers who move around with responsive foams that adjust to your body as you move - so whether you roll from your side to your back, you\'re supported in every position.');
+c('Sunset','Core','Temperature','Every night','You Sleep Hot Every Night',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Sunset','Core','Temperature','Most nights','You Sleep Hot Most Nights',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Sunset','Core','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Sunset','Core','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+c('Sunset','Core','BackPain','Often','You Wake Up With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+
+// ── SUNSET LUXE ──
+c('Sunset','Luxe','Firmness','Soft','You Prefer A Soft Feel',
+  'Crafted with a soft feel — our softest option: plush layers that gently contour to your body for a cradled, weightless feel.',
+  'A soft, plush, & pressure-free feel that relieves pressure on your shoulders and hips. You\'ll feel cradled without sinking too deep - our most popular option for soft-feel sleepers.');
+c('Sunset','Luxe','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — comfortable sleep with extra support across the shoulders and hips to relieve pressure points side-sleepers often experience.',
+  'A deeper comfort zone at the shoulders and hips that reduces pressure by up to 30% compared to our base model. Designed so your shoulder sinks in enough to keep your spine straight.');
+c('Sunset','Luxe','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — balanced support across all sleeping positions for people who toss and turn.',
+  'Adapts to every position with responsive foams that conform to your body as you shift positions. You won\'t feel \'stuck\' when you roll over - the mattress resets with you, keeping you supported in every position.');
+c('Sunset','Luxe','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Sunset','Luxe','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Sunset','Luxe','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Sunset','Luxe','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+c('Sunset','Luxe','BackPain','Often','You Wake Up With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+
+// ── SUNSET ELITE ──
+c('Sunset','Elite','Firmness','Soft','You Prefer A Soft Feel',
+  'Crafted with a soft feel — premium plush comfort with ultra-soft foams that gently hug your body for a luxurious, cloud-like sleep.',
+  'Our most luxurious and plushest comfort layer for the ultimate cradling feeling. Layers of cushioning and ultra-high density foams work together to eliminate pressure points and provide you with cloud-like comfort.');
+c('Sunset','Elite','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — optimal sleep with extra contouring to the hips and shoulders for best-in-class support.',
+  'Superior high-density foams designed for side sleepers to cradle the shoulders, hips, and knees while keeping your spine aligned all night - even if you shift positions.');
+c('Sunset','Elite','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — our most adaptable option with support that moves with you.',
+  'Our most adaptive high density foams that adjusts to your body while you sleep - no matter how often you move, you\'re always supported.');
+c('Sunset','Elite','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Includes our cooling cover that feels instantly cool when you get into bed and a dedicated cooling foam layer underneath engineered to pull 22% more heat away from your body throughout the night - not just at the surface.');
+c('Sunset','Elite','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Includes our cooling cover that feels instantly cool when you get into bed and a dedicated cooling foam layer underneath engineered to pull 22% more heat away from your body throughout the night - not just at the surface.');
+c('Sunset','Elite','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Includes our cooling cover that feels instantly cool when you get into bed and a dedicated cooling foam layer underneath engineered to pull 22% more heat away from your body throughout the night - not just at the surface.');
+c('Sunset','Elite','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Sunset','Elite','BackPain','Often','You Wake Up With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Sunset','Elite','Budget','I want the best of the best','You\'re Looking For The Best Of The Best',
+  'Our top-of-the-line mattress — Premium materials, our most advanced cooling system, and included extra lumbar support engineered for the ultimate sleep.',
+  'You said you want the best we make - this is it. Every premium feature we offer is included: our most advanced cooling, our best lumbar support, and our highest-quality materials.');
+
+// ── MIDNIGHT CORE ──
+c('Midnight','Core','Firmness','Medium','You Prefer A Medium Feel',
+  'Crafted with a medium feel — cozy and soft with cushioned support.',
+  'A balanced, medium feel. Not too soft, not too firm - a balanced feel that supports your body without creating pressure points. A great starting point for most sleepers.');
+c('Midnight','Core','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — better sleep by supporting your shoulders and hips, the pressure points side-sleepers often experience.',
+  'Extra contouring at the shoulders and hips - the two spots where side sleepers feel the most pressure. Helps keep your spine level instead of sagging at the hip.');
+c('Midnight','Core','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — support that adapts as you switch positions throughout the night.',
+  'A responsive surface that adjusts as you move - so whether you roll from your side to your back, you\'re supported in every position.');
+c('Midnight','Core','Temperature','Every night','You Sleep Hot Every Night',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Midnight','Core','Temperature','Most nights','You Sleep Hot Most Nights',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Midnight','Core','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Midnight','Core','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+c('Midnight','Core','BackPain','Often','You Wake Up With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+
+// ── MIDNIGHT LUXE ──
+c('Midnight','Luxe','Firmness','Medium','You Prefer A Medium Feel',
+  'Crafted with a medium feel — our goldilocks option: not too firm or too soft.',
+  'A more responsive medium feel. The same balanced feel with a more responsive comfort layer that adapts to your body\'s shape. Reduces the \'stuck in the mattress\' feeling while still contouring where you need it.');
+c('Midnight','Luxe','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — comfortable sleep with extra support across the shoulders and hips to relieve pressure points side-sleepers often experience.',
+  'A deeper comfort zone at the shoulders and hips that reduces pressure by up to 30% compared to our base model. Designed so your shoulder sinks in enough to keep your spine straight.');
+c('Midnight','Luxe','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — balanced support across all sleeping positions for people who toss and turn.',
+  'A faster-responding comfort layer that bounces back as you shift positions. You won\'t feel \'stuck\' when you roll over - the mattress resets with you, keeping you supported in every position.');
+c('Midnight','Luxe','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Midnight','Luxe','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Midnight','Luxe','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Midnight','Luxe','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+c('Midnight','Luxe','BackPain','Often','You Wake Up With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+
+// ── MIDNIGHT ELITE ──
+c('Midnight','Elite','Firmness','Medium','You Prefer A Medium Feel',
+  'Crafted with a medium feel — the perfect blend of cushioning support and plush comfort.',
+  'Multiple comfort layers that dynamically adjust to your body position - more give where you need cushioning, more support where you need alignment. Our most advanced take on medium.');
+c('Midnight','Elite','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — optimal sleep with extra contouring to the hips and shoulders for best-in-class support.',
+  'Our most advanced contouring specifically shaped for the side-sleep position. Targeted support zones at the shoulder, hip, and knee keep your spine aligned all night - even if you shift positions.');
+c('Midnight','Elite','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — our most adaptable option with support that moves with you.',
+  'Our most responsive design that adjusts to every position within seconds. Targeted support zones for side, back, and stomach positions work together - no matter how often you move, you\'re always supported.');
+c('Midnight','Elite','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Midnight','Elite','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Midnight','Elite','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Midnight','Elite','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Midnight','Elite','BackPain','Often','You Wake Up With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Midnight','Elite','Budget','I want the best of the best','You\'re Looking For The Best Of The Best',
+  'Our top-of-the-line mattress — Premium materials, our most advanced cooling system, and included extra lumbar support engineered for the ultimate sleep.',
+  'You said you want the best we make - this is it. Every premium feature we offer is included: our most advanced cooling, our best lumbar support, and our highest-quality materials.');
+
+// ── TWILIGHT CORE ──
+c('Twilight','Core','Firmness','Firm','You Prefer A Firm Feel',
+  'Crafted with a firm feel — sturdy and supportive with a solid, structured surface that keeps your spine aligned.',
+  'A solid, supportive feel. A firm sleep surface that keeps you on top of the mattress, not sinking into it. Ideal if you prefer a structured, supportive foundation.');
+c('Twilight','Core','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — better sleep by supporting your shoulders and hips, the pressure points side-sleepers often experience.',
+  'Extra contouring at the shoulders and hips - the two spots where side sleepers feel the most pressure. Helps keep your spine level instead of sagging at the hip.');
+c('Twilight','Core','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — support that adapts as you switch positions throughout the night.',
+  'A responsive surface that adjusts as you move - so whether you roll from your side to your back, you\'re supported in every position.');
+c('Twilight','Core','Temperature','Every night','You Sleep Hot Every Night',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Twilight','Core','Temperature','Most nights','You Sleep Hot Most Nights',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Twilight','Core','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Twilight','Core','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+c('Twilight','Core','BackPain','Often','You Wake Up With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+
+// ── TWILIGHT LUXE ──
+c('Twilight','Luxe','Firmness','Firm','You Prefer A Firm Feel',
+  'Crafted with a firm feel — our most supportive option with reinforced foams that keep you lifted and aligned without sacrificing comfort.',
+  'The same firm, supportive base - plus an added comfort layer so you get stability without stiffness. Stays firm where it counts, softens slightly at the surface.');
+c('Twilight','Luxe','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — comfortable sleep with extra support across the shoulders and hips to relieve pressure points side-sleepers often experience.',
+  'A deeper comfort zone at the shoulders and hips that reduces pressure by up to 30% compared to our base model. Designed so your shoulder sinks in enough to keep your spine straight.');
+c('Twilight','Luxe','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — balanced support across all sleeping positions for people who toss and turn.',
+  'A faster-responding comfort layer that bounces back as you shift positions. You won\'t feel \'stuck\' when you roll over - the mattress resets with you, keeping you supported in every position.');
+c('Twilight','Luxe','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Twilight','Luxe','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Twilight','Luxe','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Twilight','Luxe','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+c('Twilight','Luxe','BackPain','Often','You Wake Up With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+
+// ── TWILIGHT ELITE ──
+c('Twilight','Elite','Firmness','Firm','You Prefer A Firm Feel',
+  'Crafted with a firm feel — premium support with high-density foams that provide a solid, stable sleep surface with just enough give for comfort.',
+  'Our densest, most supportive foam core paired with a thin comfort layer on top. Keeps your spine perfectly aligned while still feeling comfortable - not rigid. Built for people who want firm to actually mean firm.');
+c('Twilight','Elite','Position','Side','You Are A Side Sleeper',
+  'Designed for side sleepers — optimal sleep with extra contouring to the hips and shoulders for best-in-class support.',
+  'Our most advanced contouring specifically shaped for the side-sleep position. Targeted support zones at the shoulder, hip, and knee keep your spine aligned all night - even if you shift positions.');
+c('Twilight','Elite','Position','Toss and Turn','You Toss And Turn',
+  'Designed for combination sleepers — our most adaptable option with support that moves with you.',
+  'Our most responsive design that adjusts to every position within seconds. Targeted support zones for side, back, and stomach positions work together - no matter how often you move, you\'re always supported.');
+c('Twilight','Elite','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Twilight','Elite','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Twilight','Elite','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Twilight','Elite','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Twilight','Elite','BackPain','Often','You Wake Up With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Twilight','Elite','Budget','I want the best of the best','You\'re Looking For The Best Of The Best',
+  'Our top-of-the-line mattress — Premium materials, our most advanced cooling system, and included extra lumbar support engineered for the ultimate sleep.',
+  'You said you want the best we make - this is it. Every premium feature we offer is included: our most advanced cooling, our best lumbar support, and our highest-quality materials.');
+
+// ── MOONLIGHT CORE ──
+c('Moonlight','Core','Firmness','Soft','You Prefer A Soft Feel',
+  'Crafted with a soft feel — feels plush and gentle with cloud-like cushioning that cradles your body.',
+  'A plush sleep surface that gently contours to your body while still supporting your spine. Designed to feel like you\'re sleeping in the mattress, not on top of it.');
+c('Moonlight','Core','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — better sleep by keeping your spine properly aligned and supporting your lower back, areas where back-sleepers need it most.',
+  'Even support from shoulders to hips so your lower back doesn\'t sag into the mattress. Keeps your spine in a neutral position all night.');
+c('Moonlight','Core','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — a supportive surface that prevents your midsection from sinking, keeping you aligned all night.',
+  'A firmer surface that prevents your hips from sinking below your shoulders - the main cause of lower back strain for stomach sleepers. Keeps you flat and aligned.');
+c('Moonlight','Core','Temperature','Every night','You Sleep Hot Every Night',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Moonlight','Core','Temperature','Most nights','You Sleep Hot Most Nights',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Moonlight','Core','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Moonlight','Core','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+c('Moonlight','Core','BackPain','Often','You Wake Up With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+
+// ── MOONLIGHT LUXE ──
+c('Moonlight','Luxe','Firmness','Soft','You Prefer A Soft Feel',
+  'Crafted with a soft feel — our softest option: plush layers that gently contour to your body for a cradled, weightless feel.',
+  'An even softer, pressure-free feel. Extra-soft comfort layers that relieve pressure on your shoulders and hips. You\'ll feel cradled without sinking too deep - our most popular option for soft-feel sleepers.');
+c('Moonlight','Luxe','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — targeted support to keep your spine aligned and your lower back cradled for all-night comfort.',
+  'Reinforced lumbar zone that specifically supports your lower back - the area where most back sleepers start to feel strain. Fills the gap between your lower back and the mattress.');
+c('Moonlight','Luxe','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — reinforced core support to prevent your hips from sinking and keep your spine in a healthy position.',
+  'Reinforced center support that specifically prevents hip sag. Your midsection stays level with your chest and legs, so you wake up without that \'hammock\' feeling in your lower back.');
+c('Moonlight','Luxe','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Moonlight','Luxe','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Moonlight','Luxe','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Moonlight','Luxe','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+c('Moonlight','Luxe','BackPain','Often','You Wake Up With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+
+// ── MOONLIGHT ELITE ──
+c('Moonlight','Elite','Firmness','Soft','You Prefer A Soft Feel',
+  'Crafted with a soft feel — premium plush comfort with ultra-soft foams that gently hug your body for a luxurious, cloud-like sleep.',
+  'Our softest, most luxurious feel. Our thickest, plushest comfort layer for the ultimate sink-in feeling. Multiple layers of cushioning work together to eliminate pressure points while keeping your spine aligned.');
+c('Moonlight','Elite','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — optimal sleep with enhanced lumbar contouring and spinal alignment for best-in-class support.',
+  'Our most targeted back-sleeper design with a dedicated lumbar support layer. Provides firmer support in the center third of the mattress where your lower back needs it most, while staying softer at the shoulders.');
+c('Moonlight','Elite','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — optimal sleep with enhanced core support and responsive foams that keep you lifted and properly aligned.',
+  'Our firmest, most supportive core specifically designed to keep stomach sleepers perfectly flat. A dense support layer under your midsection ensures zero hip sag while still cushioning your chest and knees.');
+c('Moonlight','Elite','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Moonlight','Elite','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Moonlight','Elite','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Moonlight','Elite','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Moonlight','Elite','BackPain','Often','You Wake Up With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Moonlight','Elite','Budget','I want the best of the best','You\'re Looking For The Best Of The Best',
+  'Our top-of-the-line mattress — Premium materials, our most advanced cooling system, and included extra lumbar support engineered for the ultimate sleep.',
+  'You said you want the best we make - this is it. Every premium feature we offer is included: our most advanced cooling, our best lumbar support, and our highest-quality materials.');
+
+// ── DUSK CORE ──
+c('Dusk','Core','Firmness','Medium','You Prefer A Medium Feel',
+  'Crafted with a medium feel — cozy and soft with cushioned support.',
+  'A balanced, medium feel. Not too soft, not too firm - a balanced feel that supports your body without creating pressure points. A great starting point for most sleepers.');
+c('Dusk','Core','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — better sleep by keeping your spine properly aligned and supporting your lower back, areas where back-sleepers need it most.',
+  'Even support from shoulders to hips so your lower back doesn\'t sag into the mattress. Keeps your spine in a neutral position all night.');
+c('Dusk','Core','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — a supportive surface that prevents your midsection from sinking, keeping you aligned all night.',
+  'A firmer surface that prevents your hips from sinking below your shoulders - the main cause of lower back strain for stomach sleepers. Keeps you flat and aligned.');
+c('Dusk','Core','Temperature','Every night','You Sleep Hot Every Night',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Dusk','Core','Temperature','Most nights','You Sleep Hot Most Nights',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Dusk','Core','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Dusk','Core','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+c('Dusk','Core','BackPain','Often','You Wake Up With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+
+// ── DUSK LUXE ──
+c('Dusk','Luxe','Firmness','Medium','You Prefer A Medium Feel',
+  'Crafted with a medium feel — our goldilocks option: not too firm or too soft.',
+  'The same balanced feel with a more responsive comfort layer that adapts to your body\'s shape. Reduces the \'stuck in the mattress\' feeling while still contouring where you need it.');
+c('Dusk','Luxe','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — targeted support to keep your spine aligned and your lower back cradled for all-night comfort.',
+  'Reinforced lumbar zone that specifically supports your lower back - the area where most back sleepers start to feel strain. Fills the gap between your lower back and the mattress.');
+c('Dusk','Luxe','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — reinforced core support to prevent your hips from sinking and keep your spine in a healthy position.',
+  'Reinforced center support that specifically prevents hip sag. Your midsection stays level with your chest and legs, so you wake up without that \'hammock\' feeling in your lower back.');
+c('Dusk','Luxe','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Dusk','Luxe','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Dusk','Luxe','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Dusk','Luxe','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+c('Dusk','Luxe','BackPain','Often','You Wake Up With Back Pain',
+  'Includes extra lumbar support to help relieve everyday aches and pains so you wake up feeling great.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+
+// ── DUSK ELITE ──
+c('Dusk','Elite','Firmness','Medium','You Prefer A Medium Feel',
+  'Crafted with a medium feel — the perfect blend of cushioning support and plush comfort.',
+  'Multiple comfort layers that dynamically adjust to your body position - more give where you need cushioning, more support where you need alignment. Our most advanced take on medium.');
+c('Dusk','Elite','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — optimal sleep with enhanced lumbar contouring and spinal alignment for best-in-class support.',
+  'Our most targeted back-sleeper design with a dedicated lumbar support layer. Provides firmer support in the center third of the mattress where your lower back needs it most, while staying softer at the shoulders.');
+c('Dusk','Elite','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — optimal sleep with enhanced core support and responsive foams that keep you lifted and properly aligned.',
+  'Our firmest, most supportive core specifically designed to keep stomach sleepers perfectly flat. A dense support layer under your midsection ensures zero hip sag while still cushioning your chest and knees.');
+c('Dusk','Elite','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Dusk','Elite','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Dusk','Elite','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Dusk','Elite','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Dusk','Elite','BackPain','Often','You Wake Up With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Dusk','Elite','Budget','I want the best of the best','You\'re Looking For The Best Of The Best',
+  'Our top-of-the-line mattress — Premium materials, our most advanced cooling system, and included extra lumbar support engineered for the ultimate sleep.',
+  'You said you want the best we make - this is it. Every premium feature we offer is included: our most advanced cooling, our best lumbar support, and our highest-quality materials.');
+
+// ── DAWN CORE ──
+c('Dawn','Core','Firmness','Firm','You Prefer A Firm Feel',
+  'Crafted with a firm feel — sturdy and supportive with a solid, structured surface that keeps your spine aligned.',
+  'A solid, supportive feel. A firm sleep surface that keeps you on top of the mattress, not sinking into it. Ideal if you prefer a structured, supportive foundation.');
+c('Dawn','Core','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — better sleep by keeping your spine properly aligned and supporting your lower back, areas where back-sleepers need it most.',
+  'Even support from shoulders to hips so your lower back doesn\'t sag into the mattress. Keeps your spine in a neutral position all night.');
+c('Dawn','Core','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — a supportive surface that prevents your midsection from sinking, keeping you aligned all night.',
+  'A firmer surface that prevents your hips from sinking below your shoulders - the main cause of lower back strain for stomach sleepers. Keeps you flat and aligned.');
+c('Dawn','Core','Temperature','Every night','You Sleep Hot Every Night',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Dawn','Core','Temperature','Most nights','You Sleep Hot Most Nights',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Dawn','Core','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'A mattress designed to be naturally cooling — choose between our included breathable BreatheKnit Cover and our GlacioTex Cooling Pillow Top upgrade.',
+  'Includes a breathable cover that promotes comfortable airflow or, upgrade to our cooling pillow top for added plushness and silky fibers that feel cool to the touch when you get into bed.');
+c('Dawn','Core','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+c('Dawn','Core','BackPain','Often','You Wake Up With Back Pain',
+  'Designed to comfort your body — provides pressure support across the shoulders and hips, or add our ErgoAlign Contour Layer upgrade for extra lower back support.',
+  'Provides pressure support across the shoulders and hips, or upgrade to add a targeted layer of extra dense foam where your lumbar region rests, preventing sagging in your lower back to alleviate tightness and discomfort.');
+
+// ── DAWN LUXE ──
+c('Dawn','Luxe','Firmness','Firm','You Prefer A Firm Feel',
+  'Crafted with a firm feel — our most supportive option with reinforced foams that keep you lifted and aligned without sacrificing comfort.',
+  'The same firm, supportive base - plus an added comfort layer so you get stability without stiffness. Stays firm where it counts, softens slightly at the surface.');
+c('Dawn','Luxe','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — targeted support to keep your spine aligned and your lower back cradled for all-night comfort.',
+  'Reinforced lumbar zone that specifically supports your lower back - the area where most back sleepers start to feel strain. Fills the gap between your lower back and the mattress.');
+c('Dawn','Luxe','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — reinforced core support to prevent your hips from sinking and keep your spine in a healthy position.',
+  'Reinforced center support that specifically prevents hip sag. Your midsection stays level with your chest and legs, so you wake up without that \'hammock\' feeling in your lower back.');
+c('Dawn','Luxe','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Dawn','Luxe','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Dawn','Luxe','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our breathable TENCEL™ Cover or upgrade to our GlacioTex Cooling Cover for that cool-sheets feeling.',
+  'Includes our airy and breathable TENCEL™ fabric cover or upgrade to our premium cooling cover made up of silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.');
+c('Dawn','Luxe','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes extra lumbar support to help alleviate pain — wake up feeling great thanks to extra zoned lumbar support to help relieve everyday aches and pains.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body (your trunk) stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+c('Dawn','Luxe','BackPain','Often','You Wake Up With Back Pain',
+  'Includes extra lumbar support to help alleviate pain — wake up feeling great thanks to extra zoned lumbar support to help relieve everyday aches and pains.',
+  'Your Luxe mattress comes with reinforced coils in the center third of the mattress that ensure the heaviest part of your body (your trunk) stays supported and prevents lower back sagging, which is one of the most common causes of mattress-related back pain.');
+
+// ── DAWN ELITE ──
+c('Dawn','Elite','Firmness','Firm','You Prefer A Firm Feel',
+  'Crafted with a firm feel — premium support with high-density foams that provide a solid, stable sleep surface with just enough give for comfort.',
+  'Our densest, most supportive foam core paired with a thin comfort layer on top. Keeps your spine perfectly aligned while still feeling comfortable - not rigid. Built for people who want firm to actually mean firm.');
+c('Dawn','Elite','Position','Back','You Are A Back Sleeper',
+  'Designed for back sleepers — optimal sleep with enhanced lumbar contouring and spinal alignment for best-in-class support.',
+  'Our most targeted back-sleeper design with a dedicated lumbar support layer. Provides firmer support in the center third of the mattress where your lower back needs it most, while staying softer at the shoulders.');
+c('Dawn','Elite','Position','Stomach','You Are A Stomach Sleeper',
+  'Designed for stomach sleepers — optimal sleep with enhanced core support and responsive foams that keep you lifted and properly aligned.',
+  'Our firmest, most supportive core specifically designed to keep stomach sleepers perfectly flat. A dense support layer under your midsection ensures zero hip sag while still cushioning your chest and knees.');
+c('Dawn','Elite','Temperature','Every night','You Sleep Hot Every Night',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Dawn','Elite','Temperature','Most nights','You Sleep Hot Most Nights',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Dawn','Elite','Temperature','Sometimes','You Sometimes Sleep Hot',
+  'Includes our innovative cooling system — our GlacioTex Cooling Cover feels instantly cool when you get into bed while our CoolForce Layer pulls 22% more heat away from the body for continuous cooling all night long.',
+  'Our coolest mattress, engineered to pull 22% more heat away from your body throughout the night. The cover feels instantly cool when you get into bed, and a dedicated cooling layer underneath keeps working continuously - not just at the surface.');
+c('Dawn','Elite','BackPain','Sometimes','You Sometimes Wake With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Dawn','Elite','BackPain','Often','You Wake Up With Back Pain',
+  'Includes our most advanced lumbar support — the ErgoAlign Contour Layer helps prevent the lower back from sagging to alleviate lower back tightness and discomfort.',
+  'Includes targeted layers of premium reinforced coils and extra dense foam that work together in the center third of your mattress to prevent sagging in your lower back - keeping you supported night after night.');
+c('Dawn','Elite','Budget','I want the best of the best','You\'re Looking For The Best Of The Best',
+  'Our top-of-the-line mattress — Premium materials, our most advanced cooling system, and included extra lumbar support engineered for the ultimate sleep.',
+  'You said you want the best we make - this is it. Every premium feature we offer is included: our most advanced cooling, our best lumbar support, and our highest-quality materials.');
+
+// ─── LAYER DATA ───────────────────────────────────────────────────────────────
+// Per-model, per-tier, per-variant layer arrays
+var LAYERS = {};
+
+function setLayers(model, tier, b1arr, b2arr) {
+  LAYERS[model+'_'+tier] = { b1: b1arr, b2: b2arr };
+}
+
+// ── SUNSET CORE ──
+setLayers('Sunset','Core',[
+  {n:'Comfortable Top Layer',d:'Our Breathe Knit Cover promotes airflow and reduces heat buildup.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'Memory Plus Foam with a plush, cradling feel that gently contours around your shoulders and hips.'},
+  {n:'Custom Firmness Layer',d:'Premium Responsive Foam created for those who sleep on their sides and prefer a soft mattress.'},
+  {n:'Side-Sleeper Support Layer',d:'Helix Premium Responsive Foam made for folks who sleep on their sides and toss and turn to provide pressure relief across the shoulders and hips.'},
+  {n:'Premium Support Layer',d:'Extra-stable DuraDense Foam secures and supports the layers above for long-lasting durability.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Comfortable Top Layer',d:'A breathable cover that promotes airflow and helps reduce heat buildup while you sleep.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'A plush, cradling memory foam layer that gently contours around your shoulders and hips to relieve pressure.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a soft feel — designed to gently cradle side sleepers at the shoulders and hips.'},
+  {n:'Side-Sleeper Support Layer',d:'A targeted foam layer that provides pressure relief at the shoulders and hips — the two spots where side sleepers and combination sleepers feel the most strain.'},
+  {n:'Premium Support Layer',d:'A dense foam transition layer that keeps all the comfort layers above firmly in place and adds long-term durability to the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── SUNSET LUXE ──
+setLayers('Sunset','Luxe',[
+  {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth, Tencel Cover, or upgrade to our GlacioTex Cooling Cover.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4x the long-lasting, cradling comfort other mattresses offer.'},
+  {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam made for folks who love a soft mattress that gently cradles the body.'},
+  {n:'Side Sleeper Support Layer',d:'Premium Responsive Foam made for folks who sleep on their sides and toss and turn to provide pressure relief across the shoulders and hips.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hip and full perimeter of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Customizable Top Layer',d:'Comes with our airy, breathable TENCEL™ fabric cover, or upgrade to our premium cooling cover made with silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'An ultra-high density foam layer with 4x the long-lasting, cradling comfort of standard foam — designed to contour deeply to your shoulders and hips without breaking down over time.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a soft feel — gently cradles the body so side sleepers feel cradled without sinking too deep.'},
+  {n:'Side Sleeper Support Layer',d:'A targeted foam layer providing pressure relief at the shoulders and hips — helping side sleepers and combination sleepers stay comfortable through position changes.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hips and around the full perimeter — preventing your lower back from sagging in the center of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── SUNSET ELITE ──
+setLayers('Sunset','Elite',[
+  {n:'Cutting-Edge Cooling Top Layer',d:'Our innovative heat conductive fabric draws heat away from the surface of the mattress keeping you cool.'},
+  {n:'CoolForce™ Cooling Layer',d:'Heat transfer layer with five graphite ribbons seamlessly embedded. Pulls 22% more heat away for 12+ hours. Included on Elite.'},
+  {n:'Luxurious Comfort Layer',d:'Copper Gel Memory Foam poured in our Arizona facility cushions and supports your body. Naturally cooling and cozy.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7x the cushioning of standard foam for an ultra-plush, cradling feel.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam for stability, pressure distribution, and motion isolation.'},
+  {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam custom-created for soft feel, with plush comfort that cradles shoulders and hips.'},
+  {n:'Side-Sleeper Support Layer',d:'Premium Responsive Foam specifically to support people who sleep on their sides, toss & turn, or share with a partner.'},
+  {n:'Deluxe Lumbar Support Layer',d:'8" layer of up to 1,000 individually wrapped coils with reinforced hip support and full perimeter reinforcement.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Cutting-Edge Cooling Top Layer',d:'A heat-conductive fabric cover that actively draws heat away from the surface of the mattress, so you feel cool from the moment you get into bed.'},
+  {n:'CoolForce™ Cooling Layer',d:'A dedicated foam heat-transfer layer inside the mattress engineered to pull 22% more heat away from your body for 12+ hours — working continuously through the night, not just at the surface.'},
+  {n:'Luxurious Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'Our highest-density soft foam — 7x the cushioning of standard foam — for an ultra-plush, cradling feel that relieves pressure at the shoulders, hips, and knees.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam — absorbing movement, distributing pressure evenly, and reducing motion transfer if you share the bed.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a soft feel — designed to cradle the shoulders and hips so side sleepers sink in just enough without losing spinal support.'},
+  {n:'Side-Sleeper Support Layer',d:'A targeted pressure-relief foam layer designed for side sleepers, combination sleepers, and couples — with extra give at the shoulders and hips to keep your spine aligned.'},
+  {n:'Deluxe Lumbar Support Layer',d:'Our most advanced lumbar support: an 8" layer of up to 1,000 individually wrapped coils with reinforced support directly under the hips and around the full perimeter — preventing lower back sagging night after night.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── MIDNIGHT CORE ──
+setLayers('Midnight','Core',[
+  {n:'Comfortable Top Layer',d:'Our Breathe Knit Cover promotes airflow and reduces heat buildup.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 2.5 Memory Foam feels comfortable and relaxing.'},
+  {n:'Custom Firmness Layer',d:'Premium Responsive Foam created for those who sleep on their sides and prefer a medium feel.'},
+  {n:'Side-Sleeper Support Layer',d:'Helix Premium Responsive Foam made for folks who sleep on their sides and toss and turn to provide pressure relief across the shoulders and hips.'},
+  {n:'Premium Support Layer',d:'Extra-stable DuraDense Foam secures and supports the layers above for long-lasting durability.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Comfortable Top Layer',d:'A breathable cover that promotes airflow and helps reduce heat buildup while you sleep.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'A balanced memory foam layer that provides comfortable, even support without excessive sink.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a balanced medium feel — designed for side sleepers who want cushioning without excessive sink.'},
+  {n:'Side-Sleeper Support Layer',d:'A targeted foam layer that provides pressure relief at the shoulders and hips — the two spots where side sleepers and combination sleepers feel the most strain.'},
+  {n:'Premium Support Layer',d:'A dense foam transition layer that keeps all the comfort layers above firmly in place and adds long-term durability to the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── MIDNIGHT LUXE ──
+setLayers('Midnight','Luxe',[
+  {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth, Tencel Cover, or upgrade to our GlacioTex Cooling Cover.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4x the long-lasting, cradling comfort other mattresses offer.'},
+  {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam made for folks who love a medium feel mattress that balances cushioning comfort and support.'},
+  {n:'Side Sleeper Support Layer',d:'Premium Responsive Foam made for folks who sleep on their sides and toss and turn to provide pressure relief across the shoulders and hips.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hip and full perimeter of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Customizable Top Layer',d:'Comes with our airy, breathable TENCEL™ fabric cover, or upgrade to our premium cooling cover made with silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'An ultra-high density foam layer with 4x the durability of standard foam — provides consistent, even support for side sleepers night after night.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a balanced medium feel — cushions side sleepers at the shoulders and hips while maintaining enough support to prevent sinking.'},
+  {n:'Side Sleeper Support Layer',d:'A targeted foam layer providing pressure relief at the shoulders and hips — helping side sleepers and combination sleepers stay comfortable through position changes.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hips and around the full perimeter — preventing your lower back from sagging in the center of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── MIDNIGHT ELITE ──
+setLayers('Midnight','Elite',[
+  {n:'Cutting-Edge Cooling Top Layer',d:'Our innovative heat conductive fabric draws heat away from the surface of the mattress keeping you cool.'},
+  {n:'CoolForce™ Cooling Layer',d:'Heat transfer layer with five graphite ribbons seamlessly embedded. Pulls 22% more heat away for 12+ hours. Included on Elite.'},
+  {n:'Luxurious Comfort Layer',d:'Copper Gel Memory Foam poured in our Arizona facility cushions and supports your body. Naturally cooling and cozy.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7x the cushioning of standard foam, and nearly double the density of Luxe\'s 4.0 foam.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam for stability, pressure distribution, and motion isolation.'},
+  {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam custom-created for medium feel, with plush comfort and support across the shoulders, hips, and lower back.'},
+  {n:'Side-Sleeper Support Layer',d:'Premium Responsive Foam specifically to support people who sleep on their sides, toss & turn, or share with a partner.'},
+  {n:'Deluxe Lumbar Support Layer',d:'8" layer of up to 1,000 individually wrapped coils with reinforced hip support and full perimeter reinforcement.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Cutting-Edge Cooling Top Layer',d:'A heat-conductive fabric cover that actively draws heat away from the surface of the mattress, so you feel cool from the moment you get into bed.'},
+  {n:'CoolForce™ Cooling Layer',d:'A dedicated foam heat-transfer layer inside the mattress engineered to pull 22% more heat away from your body for 12+ hours — working continuously through the night, not just at the surface.'},
+  {n:'Luxurious Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'Our highest-density support foam — 7x the cushioning of standard foam and nearly double the density of Luxe — for deeper, longer-lasting comfort for side sleepers.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam — absorbing movement, distributing pressure evenly, and reducing motion transfer if you share the bed.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a balanced medium feel — providing cushioned comfort and support across the shoulders, hips, and lower back for side sleepers.'},
+  {n:'Side-Sleeper Support Layer',d:'A targeted pressure-relief foam layer designed for side sleepers, combination sleepers, and couples — with extra give at the shoulders and hips to keep your spine aligned.'},
+  {n:'Deluxe Lumbar Support Layer',d:'Our most advanced lumbar support: an 8" layer of up to 1,000 individually wrapped coils with reinforced support directly under the hips and around the full perimeter — preventing lower back sagging night after night.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── TWILIGHT CORE ──
+setLayers('Twilight','Core',[
+  {n:'Comfortable Top Layer',d:'Our Breathe Knit Cover promotes airflow and reduces heat buildup.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Firm Support Memory Foam Layer',d:'High-density SupremeSupport 2.5 Memory Foam provides structured support with minimal sink.'},
+  {n:'Custom Firmness Layer',d:'Premium Responsive Foam created for those who sleep on their sides and prefer a firmer mattress.'},
+  {n:'Side-Sleeper Support Layer',d:'Helix Premium Responsive Foam made for folks who sleep on their sides and toss and turn to provide pressure relief across the shoulders and hips.'},
+  {n:'Premium Support Layer',d:'Extra-stable DuraDense Foam secures and supports the layers above for long-lasting durability.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Comfortable Top Layer',d:'A breathable cover that promotes airflow and helps reduce heat buildup while you sleep.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Firm Support Memory Foam Layer',d:'A high-density foam layer that provides structured support with minimal sink — ideal for sleepers who want to feel on top of the mattress.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a firm feel — designed for side sleepers who want solid support under their hips and shoulders.'},
+  {n:'Side-Sleeper Support Layer',d:'A targeted foam layer that provides pressure relief at the shoulders and hips — the two spots where side sleepers and combination sleepers feel the most strain.'},
+  {n:'Premium Support Layer',d:'A dense foam transition layer that keeps all the comfort layers above firmly in place and adds long-term durability to the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── TWILIGHT LUXE ──
+setLayers('Twilight','Luxe',[
+  {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth, Tencel Cover, or upgrade to our GlacioTex Cooling Cover.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Firm Support Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4x the durability and structured support other mattresses offer.'},
+  {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam made for folks who love a firmer mattress with solid, structured support.'},
+  {n:'Side Sleeper Support Layer',d:'Premium Responsive Foam made for folks who sleep on their sides and toss and turn to provide pressure relief across the shoulders and hips.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hip and full perimeter of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Customizable Top Layer',d:'Comes with our airy, breathable TENCEL™ fabric cover, or upgrade to our premium cooling cover made with silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Firm Support Memory Foam Layer',d:'An ultra-high density foam layer with 4x the structured support of standard foam — holds firm under side sleepers without softening over time.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a firm feel — provides solid, structured support for side sleepers who want to feel on top of the mattress.'},
+  {n:'Side Sleeper Support Layer',d:'A targeted foam layer providing pressure relief at the shoulders and hips — helping side sleepers and combination sleepers stay comfortable through position changes.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hips and around the full perimeter — preventing your lower back from sagging in the center of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── TWILIGHT ELITE ──
+setLayers('Twilight','Elite',[
+  {n:'Cutting-Edge Cooling Top Layer',d:'Our innovative heat conductive fabric draws heat away from the surface of the mattress keeping you cool.'},
+  {n:'CoolForce™ Cooling Layer',d:'Heat transfer layer with five graphite ribbons seamlessly embedded. Pulls 22% more heat away for 12+ hours. Included on Elite.'},
+  {n:'Luxurious Comfort Layer',d:'Copper Gel Memory Foam poured in our Arizona facility cushions and supports your body. Naturally cooling and cozy.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7x the structured support of standard foam for a firm, stable sleep surface.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam for stability, pressure distribution, and motion isolation.'},
+  {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam custom-created for firm feel, with solid support across the shoulders, hips, and lower back.'},
+  {n:'Side-Sleeper Support Layer',d:'Premium Responsive Foam specifically to support people who sleep on their sides, toss & turn, or share with a partner.'},
+  {n:'Deluxe Lumbar Support Layer',d:'8" layer of up to 1,000 individually wrapped coils with reinforced hip support and full perimeter reinforcement.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Cutting-Edge Cooling Top Layer',d:'A heat-conductive fabric cover that actively draws heat away from the surface of the mattress, so you feel cool from the moment you get into bed.'},
+  {n:'CoolForce™ Cooling Layer',d:'A dedicated foam heat-transfer layer inside the mattress engineered to pull 22% more heat away from your body for 12+ hours — working continuously through the night, not just at the surface.'},
+  {n:'Luxurious Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'Our highest-density support foam — 7x the structured support of standard foam — for a firm, stable sleep surface that holds its shape over years of use.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam — absorbing movement, distributing pressure evenly, and reducing motion transfer if you share the bed.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a firm feel — providing solid, structured support across the shoulders, hips, and lower back for side sleepers who want firm to mean firm.'},
+  {n:'Side-Sleeper Support Layer',d:'A targeted pressure-relief foam layer designed for side sleepers, combination sleepers, and couples — with extra give at the shoulders and hips to keep your spine aligned.'},
+  {n:'Deluxe Lumbar Support Layer',d:'Our most advanced lumbar support: an 8" layer of up to 1,000 individually wrapped coils with reinforced support directly under the hips and around the full perimeter — preventing lower back sagging night after night.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── MOONLIGHT CORE ──
+setLayers('Moonlight','Core',[
+  {n:'Comfortable Top Layer',d:'Our Breathe Knit Cover promotes airflow and reduces heat buildup.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'Memory Plus Foam with a plush, cradling feel that gently contours to relieve lower back pressure.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam designed for back and stomach sleepers who prefer a softer, more responsive feel.'},
+  {n:'Back-Sleeper Support Layer',d:'Helix Premium Responsive Foam made for folks who sleep on their back or stomach to provide spinal alignment and lower back support.'},
+  {n:'Premium Support Layer',d:'Extra-stable DuraDense Foam secures and supports the layers above for long-lasting durability.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Comfortable Top Layer',d:'A breathable cover that promotes airflow and helps reduce heat buildup while you sleep.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'A plush, cradling foam layer that gently contours to relieve lower back pressure for back and stomach sleepers.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a soft feel — designed for back and stomach sleepers who prefer a more cradling, body-contouring surface.'},
+  {n:'Back-Sleeper Support Layer',d:'A targeted foam layer that keeps your spine in a neutral position and prevents your lower back from sagging — the most common source of back pain for back and stomach sleepers.'},
+  {n:'Premium Support Layer',d:'A dense foam transition layer that keeps all the comfort layers above firmly in place and adds long-term durability to the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── MOONLIGHT LUXE ──
+setLayers('Moonlight','Luxe',[
+  {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth, Tencel Cover, or upgrade to our GlacioTex Cooling Cover.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4x the long-lasting, cradling comfort other mattresses offer.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam made for back and stomach sleepers who prefer a softer, more responsive feel with full-body contouring.'},
+  {n:'Back Sleeper Support Layer',d:'Premium Responsive Foam made for folks who sleep on their back or stomach to provide spinal alignment and lower back support.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hip and full perimeter of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Customizable Top Layer',d:'Comes with our airy, breathable TENCEL™ fabric cover, or upgrade to our premium cooling cover made with silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'An ultra-high density foam layer with 4x the long-lasting, cradling comfort of standard foam — gently contours to relieve lower back pressure for back and stomach sleepers.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a soft feel — gives back and stomach sleepers a more cradling surface while keeping hips from dropping too low.'},
+  {n:'Back Sleeper Support Layer',d:'A targeted foam layer that maintains spinal alignment and lower back support — keeping back and stomach sleepers in a neutral position throughout the night.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hips and around the full perimeter — preventing your lower back from sagging in the center of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── MOONLIGHT ELITE ──
+setLayers('Moonlight','Elite',[
+  {n:'Cutting-Edge Cooling Top Layer',d:'Our innovative heat conductive fabric draws heat away from the surface of the mattress keeping you cool.'},
+  {n:'CoolForce™ Cooling Layer',d:'Heat transfer layer with five graphite ribbons seamlessly embedded. Pulls 22% more heat away for 12+ hours. Included on Elite.'},
+  {n:'Luxurious Comfort Layer',d:'Copper Gel Memory Foam poured in our Arizona facility cushions and supports your body. Naturally cooling and cozy.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7x the cushioning of standard foam for an ultra-plush, cradling feel.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam for stability, pressure distribution, and motion isolation.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam custom-created for soft feel, with plush comfort that supports the lower back and prevents hip sagging.'},
+  {n:'Back-Sleeper Support Layer',d:'Premium Responsive Foam specifically to support people who sleep on their back or stomach.'},
+  {n:'Deluxe Lumbar Support Layer',d:'8" layer of up to 1,000 individually wrapped coils with reinforced hip support and full perimeter reinforcement.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Cutting-Edge Cooling Top Layer',d:'A heat-conductive fabric cover that actively draws heat away from the surface of the mattress, so you feel cool from the moment you get into bed.'},
+  {n:'CoolForce™ Cooling Layer',d:'A dedicated foam heat-transfer layer inside the mattress engineered to pull 22% more heat away from your body for 12+ hours — working continuously through the night, not just at the surface.'},
+  {n:'Luxurious Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Soft Memory Foam Layer',d:'Our highest-density soft foam — 7x the cushioning of standard foam — for an ultra-plush, cradling feel that contours to the lower back and relieves pressure for back and stomach sleepers.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam — absorbing movement, distributing pressure evenly, and reducing motion transfer if you share the bed.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a soft feel — provides plush comfort while supporting the lower back and preventing hip sagging for back and stomach sleepers.'},
+  {n:'Back-Sleeper Support Layer',d:'A targeted support foam layer designed for back and stomach sleepers — keeping your spine neutral and your lower back from dropping into the mattress.'},
+  {n:'Deluxe Lumbar Support Layer',d:'Our most advanced lumbar support: an 8" layer of up to 1,000 individually wrapped coils with reinforced support directly under the hips and around the full perimeter — preventing lower back sagging night after night.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── DUSK CORE ──
+setLayers('Dusk','Core',[
+  {n:'Comfortable Top Layer',d:'Our Breathe Knit Cover promotes airflow and reduces heat buildup.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 2.5 Memory Foam feels comfortable and relaxing.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam designed for back and stomach sleepers who prefer a balanced, medium feel.'},
+  {n:'Back-Sleeper Support Layer',d:'Helix Premium Responsive Foam made for folks who sleep on their back or stomach to keep the spine aligned and prevent hip sagging.'},
+  {n:'Premium Support Layer',d:'Extra-stable DuraDense Foam secures and supports the layers above for long-lasting durability.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Comfortable Top Layer',d:'A breathable cover that promotes airflow and helps reduce heat buildup while you sleep.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'A responsive foam layer that provides balanced support for back and stomach sleepers without feeling too stiff or too soft.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a balanced medium feel — designed for back and stomach sleepers who want support without stiffness.'},
+  {n:'Back-Sleeper Support Layer',d:'A targeted foam layer that keeps your spine aligned and prevents hip sagging — helping back and stomach sleepers wake up without lower back strain.'},
+  {n:'Premium Support Layer',d:'A dense foam transition layer that keeps all the comfort layers above firmly in place and adds long-term durability to the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── DUSK LUXE ──
+setLayers('Dusk','Luxe',[
+  {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth, Tencel Cover, or upgrade to our GlacioTex Cooling Cover.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4x the long-lasting, cradling comfort other mattresses offer.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam made for back and stomach sleepers who love a balanced, medium feel that supports without sacrificing comfort.'},
+  {n:'Back Sleeper Support Layer',d:'Premium Responsive Foam made for folks who sleep on their back or stomach to keep the spine aligned and prevent hip sagging.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hip and full perimeter of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Customizable Top Layer',d:'Comes with our airy, breathable TENCEL™ fabric cover, or upgrade to our premium cooling cover made with silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'An ultra-high density foam layer with 4x the durability of standard foam — provides consistent, balanced support for back and stomach sleepers night after night.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a balanced medium feel — supports back and stomach sleepers without sacrificing comfort or feeling overly stiff.'},
+  {n:'Back Sleeper Support Layer',d:'A targeted foam layer that keeps your spine aligned and prevents hip sagging — designed specifically for back and stomach sleepers.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hips and around the full perimeter — preventing your lower back from sagging in the center of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── DUSK ELITE ──
+setLayers('Dusk','Elite',[
+  {n:'Cutting-Edge Cooling Top Layer',d:'Our innovative heat conductive fabric draws heat away from the surface of the mattress keeping you cool.'},
+  {n:'CoolForce™ Cooling Layer',d:'Heat transfer layer with five graphite ribbons seamlessly embedded. Pulls 22% more heat away for 12+ hours. Included on Elite.'},
+  {n:'Luxurious Comfort Layer',d:'Copper Gel Memory Foam poured in our Arizona facility cushions and supports your body. Naturally cooling and cozy.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7x the cushioning of standard foam, and nearly double the density of Luxe\'s 4.0 foam.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam for stability, pressure distribution, and motion isolation.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam custom-created for medium feel, with balanced comfort and support for back and stomach sleepers.'},
+  {n:'Back-Sleeper Support Layer',d:'Premium Responsive Foam specifically to support people who sleep on their back or stomach.'},
+  {n:'Deluxe Lumbar Support Layer',d:'8" layer of up to 1,000 individually wrapped coils with reinforced hip support and full perimeter reinforcement.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Cutting-Edge Cooling Top Layer',d:'A heat-conductive fabric cover that actively draws heat away from the surface of the mattress, so you feel cool from the moment you get into bed.'},
+  {n:'CoolForce™ Cooling Layer',d:'A dedicated foam heat-transfer layer inside the mattress engineered to pull 22% more heat away from your body for 12+ hours — working continuously through the night, not just at the surface.'},
+  {n:'Luxurious Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'Our highest-density support foam — 7x the cushioning of standard foam and nearly double the density of Luxe — for deeper, longer-lasting support for back and stomach sleepers.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam — absorbing movement, distributing pressure evenly, and reducing motion transfer if you share the bed.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a balanced medium feel — providing comfortable, balanced support for back and stomach sleepers without feeling stiff.'},
+  {n:'Back-Sleeper Support Layer',d:'A targeted support foam layer designed for back and stomach sleepers — keeping your spine neutral and your lower back from dropping into the mattress.'},
+  {n:'Deluxe Lumbar Support Layer',d:'Our most advanced lumbar support: an 8" layer of up to 1,000 individually wrapped coils with reinforced support directly under the hips and around the full perimeter — preventing lower back sagging night after night.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── DAWN CORE ──
+setLayers('Dawn','Core',[
+  {n:'Comfortable Top Layer',d:'Our Breathe Knit Cover promotes airflow and reduces heat buildup.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Firm Support Memory Foam Layer',d:'High-density SupremeSupport 2.5 Memory Foam provides structured support with minimal sink.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam designed for back and stomach sleepers who prefer a firm, supportive mattress.'},
+  {n:'Back-Sleeper Support Layer',d:'Helix Premium Responsive Foam made for folks who sleep on their back or stomach to maintain spinal alignment and prevent midsection sagging.'},
+  {n:'Premium Support Layer',d:'Extra-stable DuraDense Foam secures and supports the layers above for long-lasting durability.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Comfortable Top Layer',d:'A breathable cover that promotes airflow and helps reduce heat buildup while you sleep.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Firm Support Memory Foam Layer',d:'A high-density foam layer that provides structured, stable support — keeping back and stomach sleepers on top of the mattress, not sinking into it.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a firm feel — designed for back and stomach sleepers who want a stable, supportive surface that prevents sinking.'},
+  {n:'Back-Sleeper Support Layer',d:'A targeted foam layer that maintains spinal alignment and prevents midsection sag — essential for back and stomach sleepers who need a firm, flat sleep surface.'},
+  {n:'Premium Support Layer',d:'A dense foam transition layer that keeps all the comfort layers above firmly in place and adds long-term durability to the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── DAWN LUXE ──
+setLayers('Dawn','Luxe',[
+  {n:'Customizable Top Layer',d:'Comes with our super soft, ultra-smooth, Tencel Cover, or upgrade to our GlacioTex Cooling Cover.'},
+  {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
+  {n:'Firm Support Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4x the durability and structured support other mattresses offer.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam made for back and stomach sleepers who prefer a firm, supportive mattress that prevents sinking.'},
+  {n:'Back Sleeper Support Layer',d:'Premium Responsive Foam made for folks who sleep on their back or stomach to maintain spinal alignment and prevent midsection sagging.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hip and full perimeter of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Customizable Top Layer',d:'Comes with our airy, breathable TENCEL™ fabric cover, or upgrade to our premium cooling cover made with silky, temperature-regulating fibers that feel noticeably cool to the touch when you get into bed.'},
+  {n:'Premium Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Firm Support Memory Foam Layer',d:'An ultra-high density foam layer with 4x the structured support of standard foam — keeps back and stomach sleepers on top of the mattress without sinking over time.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a firm feel — prevents back and stomach sleepers from sinking while delivering a stable, supportive surface.'},
+  {n:'Back Sleeper Support Layer',d:'A targeted foam layer that maintains spinal alignment and prevents midsection sagging — designed for back and stomach sleepers who need a firm, flat surface.'},
+  {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hips and around the full perimeter — preventing your lower back from sagging in the center of the mattress.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ── DAWN ELITE ──
+setLayers('Dawn','Elite',[
+  {n:'Cutting-Edge Cooling Top Layer',d:'Our innovative heat conductive fabric draws heat away from the surface of the mattress keeping you cool.'},
+  {n:'CoolForce™ Cooling Layer',d:'Heat transfer layer with five graphite ribbons seamlessly embedded. Pulls 22% more heat away for 12+ hours. Included on Elite.'},
+  {n:'Luxurious Comfort Layer',d:'Copper Gel Memory Foam poured in our Arizona facility cushions and supports your body. Naturally cooling and cozy.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7x the structured support of standard foam for a firm, stable sleep surface.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam for stability, pressure distribution, and motion isolation.'},
+  {n:'Custom Firmness Layer',d:'Helix Dynamic Foam custom-created for firm feel, providing solid support that prevents sinking for back and stomach sleepers.'},
+  {n:'Back-Sleeper Support Layer',d:'Premium Responsive Foam specifically to support people who sleep on their back or stomach.'},
+  {n:'Deluxe Lumbar Support Layer',d:'8" layer of up to 1,000 individually wrapped coils with reinforced hip support and full perimeter reinforcement.'},
+  {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
+],[
+  {n:'Cutting-Edge Cooling Top Layer',d:'A heat-conductive fabric cover that actively draws heat away from the surface of the mattress, so you feel cool from the moment you get into bed.'},
+  {n:'CoolForce™ Cooling Layer',d:'A dedicated foam heat-transfer layer inside the mattress engineered to pull 22% more heat away from your body for 12+ hours — working continuously through the night, not just at the surface.'},
+  {n:'Luxurious Comfort Layer',d:'Copper-infused gel memory foam that absorbs and disperses heat away from your body as you sleep, keeping the surface cooler while cushioning and supporting you throughout the night.'},
+  {n:'Ultra-Supportive Memory Foam Layer',d:'Our highest-density support foam — 7x the structured support of standard foam — for a firm, stable sleep surface that prevents sinking for back and stomach sleepers.'},
+  {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils layered between high-density foam — absorbing movement, distributing pressure evenly, and reducing motion transfer if you share the bed.'},
+  {n:'Custom Firmness Layer',d:'Responsive foam tuned for a firm feel — providing solid support that prevents sinking for back and stomach sleepers who want a stable sleep surface.'},
+  {n:'Back-Sleeper Support Layer',d:'A targeted support foam layer designed for back and stomach sleepers — maintaining spinal alignment and preventing midsection sagging throughout the night.'},
+  {n:'Deluxe Lumbar Support Layer',d:'Our most advanced lumbar support: an 8" layer of up to 1,000 individually wrapped coils with reinforced support directly under the hips and around the full perimeter — preventing lower back sagging night after night.'},
+  {n:'Durable, Stable Base Layer',d:'A high-density foam base that anchors the entire mattress, keeping every layer above it supported and stable night after night.'}
+]);
+
+// ─── PROFILE HEIGHTS ──────────────────────────────────────────────────────────
+var PROFILES={Core:'11" profile',Luxe:'13.5" profile',Elite:'15" profile'};
+
+// ─── QUIZ LOGIC ───────────────────────────────────────────────────────────────
+var answers={},cur=0,variant='A',lastResult=null;
 
 function render(){
   var q=Qs[cur];
@@ -230,90 +1080,56 @@ function calcResult(){
   var q1=answers.q1,q2=answers.q2,q3=answers.q3,q4=answers.q4,q5=answers.q5;
   var tier=q5==='I want the best of the best'?'Elite':q3==='Often'?'Luxe':'Core';
   var pos=(q1==='Side'||q1==='Toss and Turn')?'side':'back';
-  var baseMap={side:{Soft:'Sunset',Medium:'Midnight',Firm:'Twilight'},back:{Soft:'Moonlight',Medium:'Dusk',Firm:'Dawn'}};
+  var baseMap={
+    side:{Soft:'Sunset',Medium:'Midnight',Firm:'Twilight'},
+    back:{Soft:'Moonlight',Medium:'Dusk',Firm:'Dawn'}
+  };
   var base=baseMap[pos][q2];
+  var showTemp=['Every night','Most nights','Sometimes'].indexOf(q4)>-1;
+  var showBackPain=['Sometimes','Often'].indexOf(q3)>-1;
+  var showBudget=q5==='I want the best of the best';
   return{tier:tier,base:base,q1:q1,q2:q2,q3:q3,q4:q4,q5:q5,
-    showTemp:['Every night','Most nights','Sometimes'].indexOf(q4)>-1,
-    showBackPain:['Sometimes','Often'].indexOf(q3)>-1};
+    showTemp:showTemp,showBackPain:showBackPain,showBudget:showBudget};
 }
 
-var LAYERS={
-  Luxe:[
-    {n:'Customizable Top Layer',d:'Comes with our super soft Tencel Cover, or upgrade to GlacioTex Cooling Cover.'},
-    {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports your body for a cooling, cozy feel.'},
-    {n:'Ultra-Supportive Memory Foam Layer',d:'Ultra-high density Supreme Support Memory Foam with 4x the long-lasting, cradling comfort.'},
-    {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam made for your feel preference, balancing cushioning and support.'},
-    {n:'Position Support Layer',d:'Helix Premium Responsive Foam providing pressure relief across the shoulders and hips.'},
-    {n:'Enhanced Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced support under the hip and full perimeter.'},
-    {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for a longer lasting mattress.'}
-  ],
-  Elite:[
-    {n:'Cutting-Edge Cooling Top Layer',d:'Innovative heat conductive fabric draws heat away from the surface of the mattress.'},
-    {n:'CoolForce Cooling Layer',d:'Five graphite ribbons pull 22% more heat away for 12+ hours. Included on Elite.'},
-    {n:'Luxurious Comfort Layer',d:'Copper Gel Memory Foam poured in our Arizona facility. Naturally cooling and cozy.'},
-    {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 7.0 Memory Foam with 7x the cushioning of standard foam.'},
-    {n:'Superior Pressure Distribution Layer',d:'Individually wrapped steel microcoils for stability, pressure distribution, and motion isolation.'},
-    {n:'Custom Firmness Layer',d:'Helix Premium Responsive Foam custom-created for your feel preference.'},
-    {n:'Position Support Layer',d:'Premium Responsive Foam specifically for your sleep position.'},
-    {n:'Deluxe Lumbar Support Layer',d:'Up to 1,000 individually wrapped coils with reinforced hip support and full perimeter reinforcement.'},
-    {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures and supports the layers above for lasting durability.'}
-  ],
-  Core:[
-    {n:'Comfortable Top Layer',d:'Breathe Knit Cover promotes airflow and reduces heat buildup.'},
-    {n:'Premium Comfort Layer',d:'Exclusive Copper Gel Memory Foam cushions and supports for a cooling, cozy feel.'},
-    {n:'Ultra-Supportive Memory Foam Layer',d:'SupremeSupport 2.5 Memory Foam feels comfortable and relaxing.'},
-    {n:'Custom Firmness Layer',d:'Premium Responsive Foam created for your feel preference.'},
-    {n:'Position Support Layer',d:'Helix Premium Responsive Foam for pressure relief across your sleep position.'},
-    {n:'Premium Support Layer',d:'Extra-stable DuraDense Foam secures and supports all layers.'},
-    {n:'Durable, Stable Base Layer',d:'DuraDense Foam secures the layers above for long-lasting durability.'}
-  ]
-};
-var PROFILES={Core:'11" profile',Luxe:'13.5" profile',Elite:'15" profile'};
-var specWhy={
-  feel:{Soft:'Progressive soft comfort with pressure-relieving memory foam layers.',Medium:'The goldilocks option: not too firm or too soft.',Firm:'Firm support with high-density foam core and reinforced edges.'},
-  pos:'Works hand-in-hand with other layers to provide pressure support across the shoulders and hips.',
-  tempDesc:'Optional GlacioTex Cooling Cover and CoolForce Layer are scientifically proven to pull 22% more heat away from the body to keep you cool continuously for over 12 hours.',
-  tempLabel:'Cooling Technology',
-  backDesc:'Additional hip support designed to prevent lower back sagging for those who experience regular lower back discomfort and pain.',
-  backLabel:'Zoned Lumbar Support'
-};
-var plainWhy={
-  feel:{Soft:'Soft and cozy - you sink in like a cloud.',Medium:'Right in the middle - not too firm, not too soft.',Firm:'Solid support. You sleep on top of the mattress, not in it.'},
-  pos:'The mattress is built specifically for how you sleep, so you wake up comfortable.',
-  tempDesc:'This mattress is built to keep you cool all night - not just for an hour.',
-  tempLabel:'Stays cool all night',
-  backDesc:'Extra support where your lower back needs it most, so you wake up feeling better.',
-  backLabel:'Back pain support'
-};
-var posLabel={Side:'a side sleeper',Back:'a back sleeper',Stomach:'a stomach sleeper','Toss and Turn':'a combination sleeper'};
-var posLabelPlain={Side:'on your side',Back:'on your back',Stomach:'on your stomach','Toss and Turn':'all over the place'};
+// ─── COPY LOOKUP ──────────────────────────────────────────────────────────────
+function getCopy(model,tier,cat,ansKey){
+  var key=model+'_'+tier+'_'+cat+'_'+ansKey;
+  return COPY[key]||null;
+}
 
+// Map q answer values to copy lookup keys
+function feelKey(q2){return q2;} // Soft, Medium, Firm
+function posKey(q1){
+  if(q1==='Side')return 'Side';
+  if(q1==='Back')return 'Back';
+  if(q1==='Stomach')return 'Stomach';
+  if(q1==='Toss and Turn')return 'Toss and Turn';
+}
+function tempKey(q4){return q4;} // Every night, Most nights, Sometimes
+function painKey(q3){return q3;} // Sometimes, Often
+
+// ─── CARD BUILDER ─────────────────────────────────────────────────────────────
 function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
-  var spec=v==='A';
-  var W=spec?specWhy:plainWhy;
-  var layers=LAYERS[cardTier]||LAYERS.Core;
+  var isB=v==='B';
+  var layers=(LAYERS[r.base+'_'+cardTier]||{})[isB?'b2':'b1']||[];
   var profile=PROFILES[cardTier]||'';
-  var cid='acc_'+cardTier+'_'+Math.random().toString(36).slice(2,7);
 
   var card=document.createElement('div');
   card.className='mat-card'+(isPrimary?' primary':'');
 
   // Product image
   var pImg=document.createElement('img');
-  pImg.src=imgSrc(r.base,cardTier);
+  pImg.src=(cardTier==='Elite'?'Elite':r.base+'_'+cardTier)+'.jpg';
   pImg.alt=r.base+' '+cardTier;
   pImg.className='card-img';
   card.appendChild(pImg);
 
-  // Header section
-  var hdr=document.createElement('div');
-  hdr.className='card-header';
-  var topRow=document.createElement('div');
-  topRow.className='card-top-row';
+  // Header
+  var hdr=document.createElement('div');hdr.className='card-header';
+  var topRow=document.createElement('div');topRow.className='card-top-row';
   var kicker=document.createElement('div');kicker.className='card-kicker';kicker.textContent=isPrimary?'Your Perfect Match:':'You May Also Like:';
-  var badge=document.createElement('span');
-  badge.className='badge '+(isPrimary?'badge-primary':'badge-secondary');
-  badge.textContent=badgeText;
+  var badge=document.createElement('span');badge.className='badge '+(isPrimary?'badge-primary':'badge-secondary');badge.textContent=badgeText;
   topRow.appendChild(kicker);topRow.appendChild(badge);
   var nameEl=document.createElement('div');nameEl.className='card-name';
   nameEl.innerHTML='Helix '+r.base+' <em>'+cardTier+'</em>';
@@ -323,49 +1139,102 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
   card.appendChild(hdr);
 
   // Why section
-  var whySec=document.createElement('div');
-  whySec.className='why-section';
+  var whySec=document.createElement('div');whySec.className='why-section';
   var whyHead=document.createElement('div');whyHead.className='why-head';whyHead.textContent="Why You'll Love It:";
   whySec.appendChild(whyHead);
 
-  function addWhy(title,desc,featLabel,featPill,pillClass){
+  // pill styles
+  var pillBase='display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:8px 14px;border-radius:100px;font-family:\'Nunito Sans\',sans-serif;margin-top:6px;';
+  var pillGrad=pillBase+'background:linear-gradient(90deg,#81ADDA 0%,#2E3339 100%);color:#FFFFFF;';
+  var pillLight=pillBase+'background:#F1F1F1;border:1px solid #e2e8f0;color:#2E3339;';
+
+  function addWhy(label,desc,pillText,pillStyle){
     var item=document.createElement('div');item.className='why-item';
     var icon=document.createElement('div');icon.className='wi-icon';
     icon.innerHTML='<svg viewBox="0 0 12 10" fill="none"><polyline points="1,5 4.5,9 11,1" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>';
     var txt=document.createElement('div');
-    var t=document.createElement('div');t.className='wi-title';t.textContent=title;
+    var t=document.createElement('div');t.className='wi-title';t.textContent=label;
     var d=document.createElement('div');d.className='wi-desc';d.textContent=desc;
     txt.appendChild(t);txt.appendChild(d);
-    if(featLabel){
-      var fl=document.createElement('div');fl.className='feat-label';fl.textContent=featLabel;
-      var fp=document.createElement('span');fp.className='feat-pill '+pillClass;fp.textContent=featPill;
-      txt.appendChild(fl);txt.appendChild(fp);
+    if(pillText){
+      var pill=document.createElement('span');
+      pill.setAttribute('style',pillStyle||pillLight);
+      pill.textContent=pillText;
+      txt.appendChild(pill);
     }
     item.appendChild(icon);item.appendChild(txt);
     whySec.appendChild(item);
   }
 
-  var feelTitle=spec?'You Prefer A '+r.q2+' Feel':'You Like A '+r.q2+' Feel';
-  var posTitle=spec?'You Said You Are '+posLabel[r.q1]:'You Sleep '+posLabelPlain[r.q1];
-  addWhy(feelTitle,W.feel[r.q2],null,null,null);
-  addWhy(posTitle,W.pos,null,null,null);
+  // Pill text helpers
+  function tempPill(tier,primary,isB){
+    if(tier==='Elite') return isB
+      ? (primary?'+ Cooling cover & foam layer included':'+ Cooling cover & foam layer included')
+      : (primary?'+ GlacioTex Cover + CoolForce Layer included':'+ GlacioTex + CoolForce included');
+    if(tier==='Luxe') return isB
+      ? (primary?'+ Cooling cover upgrade available':'+ Cooling cover upgrade available')
+      : (primary?'+ GlacioTex Cooling Cover upgrade available':'+ GlacioTex upgrade available');
+    // Core
+    return isB
+      ? (primary?'+ Cooling pillow top upgrade available':'+ Cooling upgrade available')
+      : (primary?'+ GlacioTex Cooling Pillow Top upgrade available':'+ GlacioTex upgrade available');
+  }
+  function painPill(tier,primary,isB){
+    if(tier==='Elite') return isB
+      ? (primary?'+ Back support layer included':'+ Back support included')
+      : (primary?'+ ErgoAlign Contour Layer included':'+ ErgoAlign included');
+    if(tier==='Luxe') return isB
+      ? (primary?'+ Lumbar support included':'+ Lumbar support included')
+      : (primary?'+ Lumbar support included':'+ Lumbar support included');
+    // Core
+    return isB
+      ? (primary?'+ Back support upgrade available':'+ Back support upgrade available')
+      : (primary?'+ ErgoAlign Contour Layer upgrade available':'+ ErgoAlign upgrade available');
+  }
+
+  // Firmness bullet (no pill)
+  var feelCopy=getCopy(r.base,cardTier,'Firmness',feelKey(r.q2));
+  if(feelCopy){addWhy(feelCopy.label,isB?feelCopy.b2:feelCopy.b1);}
+
+  // Position bullet (no pill)
+  var posCopy=getCopy(r.base,cardTier,'Position',posKey(r.q1));
+  if(posCopy){addWhy(posCopy.label,isB?posCopy.b2:posCopy.b1);}
+
+  // Temperature bullet + pill (conditional)
   if(r.showTemp){
-    var tPill=isPrimary?(spec?'+ GlacioTex + CoolForce Available as Upgrades':'+ Cooling upgrades available'):(spec?'+ GlacioTex Available as Upgrade':'+ Cooling upgrade available');
-    addWhy(spec?'You Sleep Hot '+r.q4:'You tend to sleep hot',W.tempDesc,W.tempLabel,tPill,isPrimary?'fp-gradient':'fp-light');
+    var tempCopy=getCopy(r.base,cardTier,'Temperature',tempKey(r.q4));
+    if(tempCopy){
+      var tPill=tempPill(cardTier,isPrimary,isB);
+      var tStyle=isPrimary?pillGrad:pillLight;
+      addWhy(tempCopy.label,isB?tempCopy.b2:tempCopy.b1,tPill,tStyle);
+    }
   }
+
+  // Back pain bullet + pill (conditional)
   if(r.showBackPain){
-    var bPill=isPrimary?(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade available'):(spec?'+ Optional ErgoAlign Upgrade':'+ Back support upgrade');
-    addWhy(spec?'You Said You Wake Up With Back Pain':'You deal with back pain',W.backDesc,W.backLabel,bPill,isPrimary?'fp-gradient':'fp-light');
+    var painCopy=getCopy(r.base,cardTier,'BackPain',painKey(r.q3));
+    if(painCopy){
+      var bPill=painPill(cardTier,isPrimary,isB);
+      var bStyle=isPrimary?pillGrad:pillLight;
+      addWhy(painCopy.label,isB?painCopy.b2:painCopy.b1,bPill,bStyle);
+    }
   }
+
+  // Budget bullet — Elite only
+  if(r.showBudget && cardTier==='Elite'){
+    var budgetCopy=getCopy(r.base,'Elite','Budget','I want the best of the best');
+    if(budgetCopy){addWhy(budgetCopy.label,isB?budgetCopy.b2:budgetCopy.b1);}
+  }
+
   card.appendChild(whySec);
 
   // Accordion
+  var cid='acc_'+cardTier+'_'+Math.random().toString(36).slice(2,7);
   var toggle=document.createElement('div');
-  toggle.className=accOpen?'acc-toggle open':'acc-toggle';
-  toggle.id='abtn-'+cid;
+  toggle.className='acc-toggle';
   var lbl=document.createElement('span');lbl.id='albl-'+cid;lbl.textContent=accOpen?'Hide Construction Details':'View Construction Details';
-  var arr=document.createElement('span');arr.className='acc-arrow';arr.id='aarr-'+cid;
-  arr.innerHTML='&#8964;';arr.style.transform=accOpen?'rotate(180deg)':'none';
+  var arr=document.createElement('span');arr.className='acc-arrow';arr.id='aarr-'+cid;arr.innerHTML='&#8964;';
+  arr.style.transform=accOpen?'rotate(180deg)':'none';
   toggle.appendChild(lbl);toggle.appendChild(arr);
   toggle.onclick=function(){toggleAcc(cid,toggle);};
   card.appendChild(toggle);
@@ -376,9 +1245,8 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
   var profEl=document.createElement('div');profEl.className='acc-profile';profEl.textContent=profile;
   accBody.appendChild(profEl);
   var rImg=document.createElement('img');
-  rImg.src=layerSrc(r.base,cardTier);
-  rImg.alt='layers';
-  rImg.className='layer-img';
+  rImg.src=(cardTier==='Elite'?'Elite':r.base+'_'+cardTier)+'_layers.png';
+  rImg.alt='layers';rImg.className='layer-img';
   accBody.appendChild(rImg);
   layers.forEach(function(l,i){
     var lay=document.createElement('div');lay.className='acc-layer';
@@ -390,14 +1258,12 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
   card.appendChild(accBody);
 
   // Trust row
-  var trust=document.createElement('div');
-  trust.className='trust-row';
+  var trust=document.createElement('div');trust.className='trust-row';
   trust.innerHTML='<div class="trust-item"><span class="trust-val">120 Nights</span><span class="trust-label">Risk-free trial</span></div><div class="trust-item"><span class="trust-val">Free</span><span class="trust-label">Shipping &amp; returns</span></div><div class="trust-item"><span class="trust-val">Limited</span><span class="trust-label">Lifetime warranty</span></div>';
   card.appendChild(trust);
 
   // Price row
-  var price=document.createElement('div');
-  price.className='price-row';
+  var price=document.createElement('div');price.className='price-row';
   price.innerHTML='<div><span class="price-starting">Starting at</span><span class="price-main">Queen: $1,649.75</span><span class="price-was">($1,373.75)</span></div><div class="price-right"><button class="shop-btn">Shop Now</button><span class="price-link">Pricing Details</span></div>';
   card.appendChild(price);
 
@@ -407,13 +1273,8 @@ function buildCard(r,cardTier,badgeText,isPrimary,v,accOpen){
 function toggleAcc(id,el){
   var body=document.getElementById(id);
   var open=body.classList.toggle('open');
-  el.classList.toggle('open',open);
   document.getElementById('albl-'+id).textContent=open?'Hide Construction Details':'View Construction Details';
   document.getElementById('aarr-'+id).style.transform=open?'rotate(180deg)':'none';
-  document.querySelectorAll('.acc-body').forEach(function(b){open?b.classList.add('open'):b.classList.remove('open');});
-  document.querySelectorAll('.acc-toggle').forEach(function(t){open?t.classList.add('open'):t.classList.remove('open');});
-  document.querySelectorAll('[id^="albl-"]').forEach(function(l){l.textContent=open?'Hide Construction Details':'View Construction Details';});
-  document.querySelectorAll('[id^="aarr-"]').forEach(function(a){a.style.transform=open?'rotate(180deg)':'none';});
 }
 
 function showResult(){
